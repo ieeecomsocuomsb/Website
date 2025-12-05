@@ -1,6 +1,6 @@
 export function Navbar(){
     return (
-        <header className="bg-linear-to-t from-[#80c1ed] to-[#00507F] shadow-xl shadow-black/5 border-b-4 border-[#00507F] drop-shadow-[0_12px_30px_rgba(0,0,0,0.35)] sticky top-0 z-50">
+        <header className="bg-linear-to-t from-[#80c1ed] to-[#00507F] shadow-lg shadow-black/0 border-b-4 border-[#00507F] drop-shadow-[0_12px_30px_rgba(0,0,0,0.35)] sticky top-0 z-50">
             <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
             <a
             href="#home"
