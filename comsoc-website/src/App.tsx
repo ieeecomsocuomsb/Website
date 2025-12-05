@@ -10,9 +10,9 @@ import { ContactUs } from './Pages/ContactUs'
 function App() {
 
   return (
-    <div className="w-[100%] flex flex-col bg-gray-50 text-gray-900">
+    <div className="w-full flex flex-col bg-[#e6f0f6] text-gray-900">
       <Navbar />
-      <main className="flex-grow">
+      <main className="grow">
         <HomePage />
         <AboutUs />
         <Event />
