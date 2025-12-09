@@ -98,14 +98,15 @@ const Carousel: React.FC = () => {
             <h1>AGM</h1>
             <hr />
             <p>
-              Communication continues to influence the modern world, and strong
-              leadership ensures that this vision is carried forward. The Annual
-              General Meeting of the IEEE Communications Society Student Branch
-              Chapter of the University of Moratuwa celebrated the efforts of
-              the outgoing committee while welcoming new leaders committed to
-              expanding communication-focused initiatives. The event reflected
-              on the chapter’s key activities, including ComFix and the
-              Datacenter Field Visit.
+              The Annual General Meeting marked a key transition for the IEEE
+              Communications Society Student Branch Chapter, celebrating the
+              outgoing committee’s contributions while welcoming new leaders
+              committed to advancing the chapter’s mission. The AGM highlighted
+              major achievements from the past year, including ComFix and key
+              industrial visits. With renewed goals and fresh perspectives, the
+              chapter begins a new term focused on collaboration, growth, and
+              strengthening its impact within the communications engineering
+              community.
             </p>
           </div>
 
@@ -197,7 +198,7 @@ const Carousel: React.FC = () => {
                 className="myswiper-slider"
               >
                 <div>
-                  <h2>{data.title}</h2>
+                  {/* <h2>{data.title}</h2> */}
                   <p>{data.description}</p>
                   <a
                     href={data.url}
@@ -215,14 +216,15 @@ const Carousel: React.FC = () => {
             <h1>Comfix</h1>
             <hr />
             <p>
-              Communication continues to shape the modern world through its
-              influence on connectivity, information flow, and emerging
-              technologies. In this evolving landscape, Comfix’25 provided
-              undergraduates a space to explore real communication challenges
-              and develop innovative ideas that strengthen future communication
-              systems. Organized by the IEEE Communications Society Student
-              Branch Chapter of the University of Moratuwa, the event fostered
-              analytical thinking and creative problem-solving.
+              ComFix is the flagship annual ideathon organized by the IEEE
+              Communications Society Student Branch Chapter of the University of
+              Moratuwa, designed to inspire practical solutions to real
+              communication challenges. The event brings together enthusiastic
+              undergraduates to innovate, collaborate, and rethink how
+              technology can strengthen modern connectivity. With two successful
+              editions complete, the event continues to be a launchpad for fresh
+              ideas, strengthening Sri Lanka’s digital landscape and inspiring
+              the next generation of engineers.
             </p>
           </div>
         </div>
@@ -233,21 +235,17 @@ const Carousel: React.FC = () => {
             <h1>Field Visit</h1>
             <hr />
             <p>
-              Modern communication relies heavily on resilient digital
-              infrastructure, and datacenters stand at the core of this global
-              connectivity. To help undergraduates gain exposure to these
-              essential systems, the IEEE Communications Society Student Branch
-              Chapter of the University of Moratuwa organized a field visit to a
-              national-level datacenter, offering a first-hand look at how
-              uptime, reliability, and secure data flow are maintained.
-            </p>
-            <br />
-            <p>
-              The visit allowed students to observe the critical engineering
-              behind communication networks that support daily digital
-              interactions. This experience strengthened their understanding of
-              how robust communication architectures sustain the increasingly
-              interconnected world around us.
+              The IEEE Communications Society Student Branch Chapter organized
+              an industrial visit to the SLT IDC National Data Center, giving
+              undergraduates firsthand exposure to Sri Lanka’s core digital
+              infrastructure. Students explored how critical systems ensure
+              uptime, security, and uninterrupted connectivity. The visit
+              offered practical insights into server environments, network
+              operations, and data management processes. By connecting academic
+              concepts with real-world implementation, the experience
+              strengthened students’ understanding of modern communication
+              technologies and the engineering behind reliable digital
+              communication.
             </p>
           </div>
 
