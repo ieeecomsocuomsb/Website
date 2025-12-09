@@ -1,73 +1,75 @@
-# React + TypeScript + Vite
+# IEEE ComSoc UOM SB — Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Modern website built with Vite, React, TypeScript, and Tailwind CSS for the IEEE Communications Society (University of Moratuwa Student Branch).
 
-Currently, two official plugins are available:
+## Features
+- Fast dev/build with `vite`
+- React + TypeScript components
+- Tailwind CSS styling
+- Organized pages and layouts
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Prerequisites
+- Node.js 18+ (recommend 20+)
+- npm 9+
 
-## React Compiler
+## Getting Started
+```bash
+# Install dependencies
+npm install
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+# Start dev server
+npm run dev
 
-## Expanding the ESLint configuration
+# Build for production
+npm run build
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+# Preview production build locally
+npm run preview
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## Project Structure
 ```
+comsoc-website/
+	public/                # Static assets served as-is
+	src/
+		assets/              # Images and media
+		components/          # Reusable UI components (e.g., Button, Carousel)
+		Layouts/             # Layout components (e.g., Navbar)
+		Pages/               # Route-level pages (Home, Events, About, etc.)
+		App.tsx              # App shell
+		main.tsx             # React entry point
+		index.css            # Global styles
+		App.css              # App-scoped styles
+	index.html             # Vite HTML template
+	tailwind.config.js     # Tailwind configuration
+	vite.config.ts         # Vite configuration
+	tsconfig*.json         # TypeScript configs
+	eslint.config.js       # ESLint configuration
+	package.json           # Scripts and dependencies
+```
+
+## Available Scripts
+- `npm run dev`: Start Vite dev server
+- `npm run build`: Build production assets
+- `npm run preview`: Preview the built app
+
+## Styling
+- Tailwind CSS is enabled via `index.css` and `tailwind.config.js`.
+- Use utility-first classes in components and pages.
+
+## Development Notes
+- Prefer TypeScript components (`.tsx`). A legacy `Carousel.jsx` exists; consider migrating to `Carousel.tsx`.
+- Keep components small and reusable under `src/components/`.
+- Pages under `src/Pages/` should focus on content and composition.
+
+## Contributing
+1. Create a feature branch from `main`.
+2. Run `npm run dev` and ensure changes build with `npm run build`.
+3. Commit with clear messages and open a PR.
+
+## Deployment
+The `npm run build` command outputs to `dist/`. Host the contents of `dist/` on any static hosting (Netlify, Vercel, GitHub Pages, or a custom server).
+
+## License
+Copyright © IEEE ComSoc UOM SB. All rights reserved.
+
