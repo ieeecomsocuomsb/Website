@@ -152,3 +152,15 @@
 .swiper-pagination-bullet-active {
     background: #fff;
 }
+.carouselHeading{
+    text-align: center;
+    text-transform: capitalize;
+    letter-spacing: 0.8px;
+    font-size: 5rem;
+    line-height: 1.1;
+    background-color: #00a4aa;
+    background-image: linear-gradient(45deg, #00a4aa, #000);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
