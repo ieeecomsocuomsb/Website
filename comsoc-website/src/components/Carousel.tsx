@@ -227,6 +227,11 @@ const Carousel: React.FC = () => {
               ideas, strengthening Sri Lanka’s digital landscape and inspiring
               the next generation of engineers.
             </p>
+            <div className="mt-4">
+              <a href="/comfix" className="slider-btn">
+                View More
+              </a>
+            </div>
           </div>
         </div>
 
