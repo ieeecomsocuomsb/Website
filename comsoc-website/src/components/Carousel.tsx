@@ -1,11 +1,10 @@
 import React from "react";
 
-// import bgdonut1 from "./image/bg-donut-1.png";
-// import bgdonut2 from "./image/bg-donut-2.png";
-import AGM1 from "./image/AGM-1.jpeg";
-import AGM2 from "./image/AGM-2.jpeg";
-import AGM3 from "./image/AGM-3.jpeg";
-import AGM4 from "./image/AGM-4.jpeg";
+
+import AGM1 from "../assets/AGM_images/AGM-1.jpeg";
+import AGM2 from "../assets/AGM_images/AGM-2.jpeg";
+import AGM3 from "../assets/AGM_images/AGM-3.jpeg";
+import AGM4 from "../assets/AGM_images/AGM-4.jpeg"  ;
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, EffectCoverflow, Autoplay } from "swiper/modules";
