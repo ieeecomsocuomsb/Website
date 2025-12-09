@@ -88,6 +88,7 @@ const slider3: Slide[] = [
 ];
 
 const Carousel: React.FC = () => {
+  const [modalImage, setModalImage] = React.useState<string | null>(null);
   return (
     <>
       <h1 className="carouselHeading">Our Events</h1>
@@ -155,14 +156,13 @@ const Carousel: React.FC = () => {
                 <div>
                   {/* <h2>{data.title}</h2> */}
                   <p>{data.description}</p>
-                  <a
-                    href={data.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
+                  <button
+                    type="button"
+                    onClick={() => setModalImage(data.url)}
                     className="slider-btn"
                   >
                     explore
-                  </a>
+                  </button>
                 </div>
               </SwiperSlide>
             ))}
@@ -200,14 +200,13 @@ const Carousel: React.FC = () => {
                 <div>
                   {/* <h2>{data.title}</h2> */}
                   <p>{data.description}</p>
-                  <a
-                    href={data.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
+                  <button
+                    type="button"
+                    onClick={() => setModalImage(data.url)}
                     className="slider-btn"
                   >
                     explore
-                  </a>
+                  </button>
                 </div>
               </SwiperSlide>
             ))}
@@ -292,20 +291,39 @@ const Carousel: React.FC = () => {
                 <div>
                   <h2>{data.title}</h2>
                   <p>{data.description}</p>
-                  <a
-                    href={data.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
+                  <button
+                    type="button"
+                    onClick={() => setModalImage(data.url)}
                     className="slider-btn"
                   >
                     explore
-                  </a>
+                  </button>
                 </div>
               </SwiperSlide>
             ))}
           </Swiper>
         </div>
       </div>
+      {modalImage && (
+        <div
+          className="image-modal-overlay"
+          onClick={() => setModalImage(null)}
+          role="dialog"
+          aria-modal="true"
+        >
+          <div className="image-modal-content" onClick={(e) => e.stopPropagation()}>
+            <button
+              type="button"
+              className="image-modal-close"
+              aria-label="Close"
+              onClick={() => setModalImage(null)}
+            >
+              &times;
+            </button>
+            <img src={modalImage} alt="Event image" className="image-modal-img" />
+          </div>
+        </div>
+      )}
     </>
   );
 };
