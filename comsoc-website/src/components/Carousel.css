@@ -102,6 +102,7 @@
     height: 28.125rem;
     background-size: cover;
     background-position: center;
+    cursor: pointer; /* indicate click to open popup */
 }
 
 .myswiper-slider div {

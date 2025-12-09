@@ -152,6 +152,7 @@ const Carousel: React.FC = () => {
                 key={idx}
                 style={{ backgroundImage: `url(${data.url})` }}
                 className="myswiper-slider"
+                onClick={() => setModalImage(data.url)}
               >
                 <div>
                   {/* <h2>{data.title}</h2> */}
@@ -196,6 +197,7 @@ const Carousel: React.FC = () => {
                 key={idx}
                 style={{ backgroundImage: `url(${data.url})` }}
                 className="myswiper-slider"
+                onClick={() => setModalImage(data.url)}
               >
                 <div>
                   {/* <h2>{data.title}</h2> */}
@@ -287,6 +289,7 @@ const Carousel: React.FC = () => {
                 key={idx}
                 style={{ backgroundImage: `url(${data.url})` }}
                 className="myswiper-slider"
+                onClick={() => setModalImage(data.url)}
               >
                 <div>
                   <h2>{data.title}</h2>
