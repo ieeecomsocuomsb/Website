@@ -178,7 +178,7 @@
 
 .image-modal-content {
     position: relative;
-    background: #111;
+    background: transparent;
     border-radius: 0.5rem;
     padding: 0.75rem;
     max-width: 90vw;
@@ -198,12 +198,13 @@
 
 .image-modal-close {
     position: absolute;
-    top: 0.25rem;
+    top: 0.1rem;
     right: 0.5rem;
     background: transparent;
     border: none;
-    color: #fff;
-    font-size: 2rem;
+    color: #000;
+    font-size: 3rem;
     line-height: 1;
     cursor: pointer;
+    padding-right: 0.5rem;
 }
