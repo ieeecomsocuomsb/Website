@@ -1,9 +1,17 @@
 import React from "react";
 
-import AGM1 from "../assets/AGM_images/AGM-1.jpeg";
-import AGM2 from "../assets/AGM_images/AGM-2.jpeg";
-import AGM3 from "../assets/AGM_images/AGM-3.jpeg";
-import AGM4 from "../assets/AGM_images/AGM-4.jpeg";
+import AGM1 from "../assets/AGM/AGM-1.jpeg";
+import AGM2 from "../assets/AGM/AGM-2.jpg";
+import AGM3 from "../assets/AGM/AGM-3.jpeg";
+import AGM4 from "../assets/AGM/AGM-4.jpg";
+
+import FV1 from "../assets/FieldVisit/FV-1.JPG";
+
+import CF25_1 from "../assets/comfix_2025/IMG_3302.JPG";
+import CF25_2 from "../assets/comfix_2025/IMG_3303.JPG";
+import CF25_3 from "../assets/comfix_2025/IMG_3304.JPG";
+import CF25_4 from "../assets/comfix_2025/IMG_3305.JPG";
+import CF25_5 from "../assets/comfix_2025/IMG_3307.JPG";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, EffectCoverflow, Autoplay } from "swiper/modules";
@@ -20,7 +28,7 @@ type Slide = {
   url: string;
 };
 
-const slider: Slide[] = [
+const slider1: Slide[] = [
   {
     title: "AGM Photo 1",
     description: "Annual General Meeting — opening and welcome.",
@@ -40,6 +48,42 @@ const slider: Slide[] = [
     title: "AGM Photo 4",
     description: "Event activities and networking snapshots.",
     url: AGM4,
+  },
+];
+
+const slider2: Slide[] = [
+  {
+    title: "Comfix '25 — 1",
+    description: "Comfix 2025 kickoff and team briefings.",
+    url: CF25_1,
+  },
+  {
+    title: "Comfix '25 — 2",
+    description: "Hands-on sessions and idea exploration.",
+    url: CF25_2,
+  },
+  {
+    title: "Comfix '25 — 3",
+    description: "Prototyping, testing and feedback loops.",
+    url: CF25_3,
+  },
+  {
+    title: "Comfix '25 — 4",
+    description: "Showcase of solutions and collaboration.",
+    url: CF25_4,
+  },
+  {
+    title: "Comfix '25 — 5",
+    description: "Closing remarks and participant networking.",
+    url: CF25_5,
+  },
+];
+
+const slider3: Slide[] = [
+  {
+    title: "Field Visit — Datacenter",
+    description: "A glimpse into resilient infrastructure operations.",
+    url: FV1,
   },
 ];
 
@@ -66,7 +110,7 @@ const Carousel: React.FC = () => {
           </div>
 
           <Swiper
-            className="myswiper w-[70%]"
+            className="myswiper h-full slider-wide"
             modules={[Pagination, EffectCoverflow, Autoplay]}
             effect={"coverflow"}
             grabCursor={true}
@@ -81,25 +125,27 @@ const Carousel: React.FC = () => {
             loop={true}
             pagination={{ clickable: true }}
             autoplay={{
-              delay: 5000,
+              delay: 3000,
               disableOnInteraction: false,
             }}
-            breakpoints={{
-              640: {
-                slidesPerView: 2,
-              },
-              768: {
-                slidesPerView: 1,
-              },
-              1024: {
-                slidesPerView: 2,
-              },
-              1560: {
-                slidesPerView: 3,
-              },
-            }}
+            // breakpoints={{
+            //   640: {
+            //     slidesPerView: 2,
+            //   },
+            //   768: {
+            //     slidesPerView: 1,
+            //   },
+            //   1024: {
+            //     slidesPerView: 2,
+            //   },
+            //   1560: {
+            //     slidesPerView: 3,
+            //   },
+            // }}
+            slidesPerView={"auto"}
+            spaceBetween={24}
           >
-            {slider.map((data, idx) => (
+            {slider1.map((data, idx) => (
               <SwiperSlide
                 key={idx}
                 style={{ backgroundImage: `url(${data.url})` }}
@@ -123,7 +169,7 @@ const Carousel: React.FC = () => {
         </div>
         <div className="flex gap-8 w-[90%]">
           <Swiper
-            className="myswiper w-full h-full"
+            className="myswiper h-full slider-wide"
             modules={[Pagination, EffectCoverflow, Autoplay]}
             effect={"coverflow"}
             grabCursor={true}
@@ -138,25 +184,13 @@ const Carousel: React.FC = () => {
             loop={true}
             pagination={{ clickable: true }}
             autoplay={{
-              delay: 5000,
+              delay: 3000,
               disableOnInteraction: false,
             }}
-            breakpoints={{
-              640: {
-                slidesPerView: 2,
-              },
-              768: {
-                slidesPerView: 1,
-              },
-              1024: {
-                slidesPerView: 2,
-              },
-              1560: {
-                slidesPerView: 3,
-              },
-            }}
+            slidesPerView={"auto"}
+            spaceBetween={24}
           >
-            {slider.map((data, idx) => (
+            {slider2.map((data, idx) => (
               <SwiperSlide
                 key={idx}
                 style={{ backgroundImage: `url(${data.url})` }}
@@ -233,7 +267,7 @@ const Carousel: React.FC = () => {
             loop={true}
             pagination={{ clickable: true }}
             autoplay={{
-              delay: 5000,
+              delay: 3000,
               disableOnInteraction: false,
             }}
             breakpoints={{
@@ -251,7 +285,7 @@ const Carousel: React.FC = () => {
               },
             }}
           >
-            {slider.map((data, idx) => (
+            {slider3.map((data, idx) => (
               <SwiperSlide
                 key={idx}
                 style={{ backgroundImage: `url(${data.url})` }}
