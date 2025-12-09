@@ -314,7 +314,10 @@ const Carousel: React.FC = () => {
           role="dialog"
           aria-modal="true"
         >
-          <div className="image-modal-content" onClick={(e) => e.stopPropagation()}>
+          <div
+            className="image-modal-content"
+            onClick={(e) => e.stopPropagation()}
+          >
             <button
               type="button"
               className="image-modal-close"
@@ -323,7 +326,11 @@ const Carousel: React.FC = () => {
             >
               &times;
             </button>
-            <img src={modalImage} alt="Event image" className="image-modal-img" />
+            <img
+              src={modalImage}
+              alt="Event image"
+              className="image-modal-img"
+            />
           </div>
         </div>
       )}
