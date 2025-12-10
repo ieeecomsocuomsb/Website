@@ -1,0 +1,10 @@
+# Root-level ignores for the Website repo
+
+# Ignore VS Code settings at website root
+.vscode/
+
+# Delegate app-specific ignores to comsoc-website/.gitignore
+comsoc-website/node_modules/
+comsoc-website/dist/
+comsoc-website/dist-ssr/
+comsoc-website/*.local
