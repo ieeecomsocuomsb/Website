@@ -33,8 +33,8 @@ export function Navbar() {
       className={cn(
         "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
         isScrolled
-          ? "bg-[#ffff]/95 backdrop-blur-md shadow-md py-3"
-          : "bg-[#005485] py-5"
+          ? "bg-[#ffff]/85 backdrop-blur-md shadow-md py-3"
+          : "bg-[#005485]/85 py-5"
       )}
     >
       <div className="container-max section-padding">

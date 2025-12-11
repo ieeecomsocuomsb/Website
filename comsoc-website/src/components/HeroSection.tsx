@@ -1,12 +1,34 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Radio, Wifi, Signal } from "lucide-react";
+import { ArrowRight, Radio, Signal, Wifi } from "lucide-react";
+import heroHuman from "@/assets/hero/human.webp";
+import heroNet from "@/assets/hero/net.webp";
+import heroNetwork from "@/assets/hero/network.webp";
+
+const heroImages = [heroHuman, heroNet, heroNetwork];
+const fadeCycleSeconds = 15;
 
 export function HeroSection() {
   return (
     <section className="relative min-h-screen flex items-center hero-gradient overflow-hidden">
       {/* Animated Background Elements */}
       <div className="absolute inset-0 network-pattern" />
+
+      {/* Fading gallery with gradient fade */}
+      <div className="hero-fade-container" aria-hidden>
+        {heroImages.map((src, idx) => (
+          <div
+            key={idx}
+            className="hero-fade-image"
+            style={{
+              ["--hero-fade-delay" as string]: `${(fadeCycleSeconds / heroImages.length) * idx}s`,
+              ["--hero-fade-cycle" as string]: `${fadeCycleSeconds}s`,
+              backgroundImage: `url(${src})`,
+            }}
+          />
+        ))}
+        <div className="hero-fade-gradient" />
+      </div>
       
       {/* Floating Icons */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
@@ -80,23 +102,6 @@ export function HeroSection() {
             </Button>
           </div>
 
-          {/* Stats */}
-          <div className="grid grid-cols-3 gap-8 mt-16 pt-8 border-t border-primary-foreground/10 animate-fade-in-up animation-delay-400">
-            {[
-              { value: "50+", label: "Active Members" },
-              { value: "20+", label: "Events Yearly" },
-              { value: "5+", label: "Years Strong" },
-            ].map((stat) => (
-              <div key={stat.label}>
-                <p className="text-3xl sm:text-4xl font-bold text-primary-foreground">
-                  {stat.value}
-                </p>
-                <p className="text-sm text-primary-foreground/60 mt-1">
-                  {stat.label}
-                </p>
-              </div>
-            ))}
-          </div>
         </div>
       </div>
 
