@@ -36,10 +36,10 @@ export function ContactUs(){
                     </div>
                 </div>
 
-                <div className="mt-6 text-center text-sm text-gray-500">
+                {/* <div className="mt-6 text-center text-sm text-gray-500">
                     <p>Email: <a href="mailto:info@ieeecomsoc.example" className="text-blue-600 hover:underline">info@ieeecomsoc.example</a></p>
                     <p className="mt-1">Location: University Campus</p>
-                </div>
+                </div> */}
             </div>
         </section>
     )
