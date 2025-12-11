@@ -7,11 +7,11 @@ export function HomePage(){
                     src={new URL('../components/image/AGM-4.jpeg', import.meta.url).href}
                     alt="Community gathering"
                 />
-                <img
-                    className="relative z-10 drop-shadow-[0_0_20px_rgba(255,255,255,0.9)]"
+                {/* <img
+                    className="relative z-10 "
                     src="/favicon.png"
                     alt="logo"
-                />
+                /> */}
                 <div className="absolute inset-0 bg-linear-to-r from-[#0f172a]/90 via-[#0f172a]/50 to-transparent" />
                 <div className="relative z-10 max-w-2xl px-8 py-16 text-left text-white">
                     <h1 className="text-4xl md:text-5xl font-semibold leading-tight">Welcome to ComSoc</h1>
