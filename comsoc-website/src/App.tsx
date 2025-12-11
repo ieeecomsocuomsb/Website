@@ -1,48 +1,32 @@
-import "./App.css";
-import { AboutUs } from "./Pages/AboutUs";
-import { Committee } from "./Pages/Committee";
-import { Event } from "./Pages/Event";
-import { HomePage } from "./Pages/HomePage";
-import { Footer } from "./Pages/Footer";
-import { Navbar } from "./Layouts/Navbar";
-import { ContactUs } from "./Pages/ContactUs";
-import ComfixPage from "./Pages/sub_pages/comfix";
-import React from "react";
+import { Toaster } from "@/components/ui/toaster";
+import { Toaster as Sonner } from "@/components/ui/sonner";
+import { TooltipProvider } from "@/components/ui/tooltip";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Index from "./pages/Index";
+import About from "./pages/About";
+import Events from "./pages/Events";
+import Committee from "./pages/Committee";
+import NotFound from "./pages/NotFound";
 
-function App() {
-  const [route, setRoute] = React.useState<string>(window.location.pathname);
+const queryClient = new QueryClient();
 
-  React.useEffect(() => {
-    const onPopState = () => setRoute(window.location.pathname);
-    window.addEventListener("popstate", onPopState);
-    return () => window.removeEventListener("popstate", onPopState);
-  }, []);
-
-  if (route.startsWith("/comfix")) {
-    return (
-      <div className="w-full flex flex-col bg-[#0b1f24] text-white">
-        <Navbar />
-        <main className="grow">
-          <ComfixPage />
-        </main>
-        <Footer />
-      </div>
-    );
-  }
-
-  return (
-    <div className="w-full flex flex-col bg-[#e6f0f6] text-gray-900">
-      <Navbar />
-      <main className="grow">
-        <HomePage />
-        <AboutUs />
-        <Event />
-        <Committee />
-        <ContactUs />
-      </main>
-      <Footer />
-    </div>
-  );
-}
+const App = () => (
+  <QueryClientProvider client={queryClient}>
+    <TooltipProvider>
+      <Toaster />
+      <Sonner />
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Index />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/events" element={<Events />} />
+          <Route path="/committee" element={<Committee />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </BrowserRouter>
+    </TooltipProvider>
+  </QueryClientProvider>
+);
 
 export default App;
