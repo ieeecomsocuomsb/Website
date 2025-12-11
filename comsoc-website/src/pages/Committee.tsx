@@ -172,7 +172,7 @@ const Committee = () => {
                   Reach out to learn about upcoming opportunities.
                 </p>
                 <a
-                  href="mailto:comsoc@ieee.uom.lk"
+                  href="mailto:ieeecomsocuomsb@gmail.com"
                   className="inline-flex items-center gap-2 bg-primary-foreground text-primary px-8 py-3 rounded-lg font-semibold hover:bg-primary-foreground/90 transition-colors"
                 >
                   <Mail size={20} />

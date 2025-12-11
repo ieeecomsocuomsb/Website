@@ -1,7 +1,17 @@
+import { useState } from "react";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
-import { Calendar, MapPin, Clock, ArrowRight, Users, Award, BookOpen } from "lucide-react";
+import { Calendar, MapPin, Clock, ArrowRight, Users, Award, BookOpen, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+} from "@/components/ui/dialog";
+import comfix1 from "@/assets/comfix_2025/IMG_3302.JPG";
+import comfix2 from "@/assets/comfix_2025/IMG_3304.JPG";
 
 const upcomingEvents = [
   {
@@ -71,6 +81,10 @@ const categoryColors: Record<string, string> = {
 };
 
 const Events = () => {
+  const [stage1Open, setStage1Open] = useState(false);
+  const [stage2Open, setStage2Open] = useState(false);
+  const [stage3Open, setStage3Open] = useState(false);
+
   return (
     <div className="min-h-screen">
       <Navbar />
@@ -84,8 +98,7 @@ const Events = () => {
                 Events & Activities
               </h1>
               <p className="text-xl text-primary-foreground/80 leading-relaxed animate-fade-in-up animation-delay-100">
-                Discover our workshops, seminars, competitions, and networking 
-                opportunities throughout the year.
+                Discover our events and activities throughout the year.<br/><br/>
               </p>
             </div>
           </div>
@@ -97,7 +110,7 @@ const Events = () => {
         </section>
 
         {/* Upcoming Events */}
-        <section className="py-20 bg-background">
+        {/* <section className="py-20 bg-background">
           <div className="container-max section-padding">
             <div className="flex items-center justify-between mb-12">
               <div>
@@ -159,8 +172,80 @@ const Events = () => {
               ))}
             </div>
           </div>
-        </section>
+        </section> */}
 
+        {/* ComFix Spotlight */}
+        <section className="py-20 bg-background relative overflow-hidden">
+          <div
+            className="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_20%_20%,#005485_0,transparent_35%),radial-gradient(circle_at_80%_10%,#00a0e0_0,transparent_30%)]"
+            aria-hidden
+          />
+          <div className="container-max section-padding relative z-10">
+                <div>
+                  <img src="../public/comfix.png" alt="ComFix Logo" className="h-40 mb-4" />
+                </div>
+            <div className="grid lg:grid-cols-[1.1fr_0.9fr] gap-10 items-center">
+              <div className="space-y-4">
+                {/* <div className="inline-flex items-center gap-2 bg-primary/10 text-primary rounded-full px-4 py-2 text-sm font-semibold">
+                  <Sparkles size={16} />
+                  ComFix 2025
+                </div> */}
+                <h2 className="text-3xl sm:text-4xl font-bold text-foreground">
+                  Innovate. Iterate. Ignite.
+                </h2>
+                <p className="text-muted-foreground leading-relaxed">
+                  ComFix 2025 is the second iteration of the communication technology ideation competition organized 
+                  by the IEEE Communications Society (ComSoc) student branch chapter of the University of Moratuwa. We aim to 
+                  promote the innovative thinking and technological know-how of undergraduates in the field of Communication 
+                  Technology by solving real-world problems. 
+                </p>
+                <div className="grid sm:grid-cols-3 gap-3 text-sm text-foreground">
+                  <Button
+                    variant="outline"
+                    className="w-full"
+                    onClick={() => setStage1Open(true)}
+                  >
+                    Stage 1
+                    <ArrowRight size={14} className="ml-2" />
+                  </Button>
+                  <Button
+                    variant="outline"
+                    className="w-full"
+                    onClick={() => setStage2Open(true)}
+                  >
+                    Stage 2
+                    <ArrowRight size={14} className="ml-2" />
+                  </Button>
+                  <Button
+                    variant="outline"
+                    className="w-full"
+                    onClick={() => setStage3Open(true)}
+                  >
+                    Stage 3
+                    <ArrowRight size={14} className="ml-2" />
+                  </Button>
+                </div>
+              </div>
+
+              <div className="grid sm:grid-cols-2 gap-4">
+                {[comfix1, comfix2].map((img, idx) => (
+                  <div
+                    key={idx}
+                    className="relative overflow-hidden rounded-2xl shadow-[0_20px_50px_rgba(0,0,0,0.25)]"
+                  >
+                    <img
+                      src={img}
+                      alt="ComFix highlight"
+                      className="w-full h-56 sm:h-64 object-cover transition-transform duration-500 hover:scale-105"
+                      loading="lazy"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/45 to-transparent" />
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
         {/* Past Events */}
         <section className="py-20 bg-muted/50">
           <div className="container-max section-padding">
@@ -247,6 +332,185 @@ const Events = () => {
           </div>
         </section>
       </main>
+      <Dialog open={stage1Open} onOpenChange={setStage1Open}>
+        <DialogContent className="max-w-4xl max-h-[80vh] overflow-y-auto">
+          <DialogHeader>
+            <DialogTitle className="text-2xl">Stage 1 Guidelines</DialogTitle>
+            <DialogDescription className="text-base">
+              Focus on identifying a real-world problem that can be meaningfully addressed with communication technology.
+            </DialogDescription>
+          </DialogHeader>
+
+          <div className="space-y-6 text-sm text-foreground">
+            <section className="space-y-2">
+              <h3 className="text-lg font-semibold text-primary">Problem Identification</h3>
+              <p className="text-muted-foreground">
+                The main focus during stage 1 is problem identification. Pick a real-world problem (any field: agriculture, transportation, education, climate change, industrial applications, medicine, science, or within comms itself) where communication technology is central to the solution.
+              </p>
+              <p className="text-muted-foreground">
+                You do not need a complete solution yet, but you must outline how communication technology can meaningfully solve the problem.
+              </p>
+            </section>
+
+            <section className="space-y-2">
+              <h3 className="text-lg font-semibold text-primary">What is Communication Technology?</h3>
+              <p className="text-muted-foreground">An umbrella term intersecting many disciplines:</p>
+              <ul className="list-disc pl-5 space-y-1 text-muted-foreground">
+                <li>Telecommunications / Wireless communications</li>
+                <li>Computer networking and Internet</li>
+                <li>Internet of Things (IoT)</li>
+                <li>Big Data</li>
+                <li>Communication Software</li>
+                <li>Cyber Security</li>
+              </ul>
+              <p className="text-muted-foreground text-sm">
+                Find more areas at <a href="https://www.comsoc.org/technical-activities" className="text-primary underline" target="_blank" rel="noreferrer">comsoc.org/technical-activities</a>.
+              </p>
+            </section>
+
+            <section className="space-y-2">
+              <h3 className="text-lg font-semibold text-primary">Problem Presentation</h3>
+              <p className="text-muted-foreground">Submit a short report (PDF, max 3 pages) that includes:</p>
+              <ul className="list-disc pl-5 space-y-1 text-muted-foreground">
+                <li>Title (related to the problem)</li>
+                <li>Team name</li>
+                <li>Group member names / individual name</li>
+                <li>Explanation of the identified problem (data, statistics, etc.)</li>
+                <li>Why the problem needs to be solved</li>
+                <li>How communication technology can be used for the solution (no full solution required)</li>
+                <li>References (if any)</li>
+              </ul>
+            </section>
+
+            <section className="space-y-2">
+              <h3 className="text-lg font-semibold text-primary">Report Submission</h3>
+              <ul className="list-disc pl-5 space-y-1 text-muted-foreground">
+                <li>Format: PDF</li>
+                <li>Length: maximum of 3 pages</li>
+                <li>Submission Deadline: <strong>30th March 2025</strong> (updates via WhatsApp group)</li>
+              </ul>
+              <p className="text-muted-foreground">
+                Submissions will be evaluated for impact and the connection of the solution to communication technology. Selected competitors advance to Stage 2.
+              </p>
+              <p className="text-muted-foreground text-sm italic">
+                Any changes or updates will be notified via the WhatsApp Group.
+              </p>
+            </section>
+          </div>
+        </DialogContent>
+      </Dialog>
+      <Dialog open={stage2Open} onOpenChange={setStage2Open}>
+        <DialogContent className="max-w-4xl max-h-[80vh] overflow-y-auto">
+          <DialogHeader>
+            <DialogTitle className="text-2xl">Stage 2 Guidelines</DialogTitle>
+            <DialogDescription className="text-base">
+              Develop and present a novel, feasible solution that meaningfully uses communication technology.
+            </DialogDescription>
+          </DialogHeader>
+
+          <div className="space-y-6 text-sm text-foreground">
+            <section className="space-y-2">
+              <h3 className="text-lg font-semibold text-primary">Developing the Solution</h3>
+              <p className="text-muted-foreground">
+                With your problem defined, focus on crafting a strong solution. Consider multiple alternatives, evaluate them, pick the best, assess feasibility, and outline a robust implementation plan.
+              </p>
+              <ul className="list-disc pl-5 space-y-1 text-muted-foreground">
+                <li>Ensure the problem is well-defined (from Stage 1)</li>
+                <li>Generate multiple solution alternatives</li>
+                <li>Evaluate and select the best alternative</li>
+                <li>Assess feasibility</li>
+                <li>Draft a robust implementation plan</li>
+              </ul>
+              <p className="text-muted-foreground">
+                A full implementation is not required, but present an effective plan with research, methodology, novelty, challenges, and expected outcomes.
+              </p>
+            </section>
+
+            <section className="space-y-2">
+              <h3 className="text-lg font-semibold text-primary">Important</h3>
+              <p className="text-muted-foreground">
+                Your solution must incorporate appropriate communication technology (within IEEE ComSoc domains). A solution that is only a mobile app or website will not meet the criteria.
+              </p>
+            </section>
+
+            <section className="space-y-2">
+              <h3 className="text-lg font-semibold text-primary">Solution Presentation</h3>
+              <p className="text-muted-foreground">Submit a short report (PDF, max 10 pages) including:</p>
+              <ul className="list-disc pl-5 space-y-1 text-muted-foreground">
+                <li>Title</li>
+                <li>Team name and members</li>
+                <li>Brief problem recap</li>
+                <li>Considered alternatives</li>
+                <li>Implementation methodology</li>
+                <li>Technical details (block diagrams, hardware, software, algorithms, etc.) and how communication technology is used</li>
+                <li>Feasibility, challenges, novelty, and impact</li>
+                <li>References (if any)</li>
+              </ul>
+            </section>
+
+            <section className="space-y-2">
+              <h3 className="text-lg font-semibold text-primary">Report Submission</h3>
+              <ul className="list-disc pl-5 space-y-1 text-muted-foreground">
+                <li>Format: PDF</li>
+                <li>Length: maximum of 10 pages</li>
+                <li>Submission Deadline: <strong>To be announced</strong></li>
+              </ul>
+              <p className="text-muted-foreground">
+                10 competitors advance from Stage 2 to the final stage to pitch before the evaluation panel. Winners will be announced afterward.
+              </p>
+              <p className="text-muted-foreground text-sm italic">
+                Any changes or updates will be notified via the WhatsApp Group.
+              </p>
+            </section>
+          </div>
+        </DialogContent>
+      </Dialog>
+      <Dialog open={stage3Open} onOpenChange={setStage3Open}>
+        <DialogContent className="max-w-4xl max-h-[80vh] overflow-y-auto">
+          <DialogHeader>
+            <DialogTitle className="text-2xl">Stage 3 Guidelines</DialogTitle>
+            <DialogDescription className="text-base">
+              Prepare and deliver a concise presentation of your solution to the expert panel.
+            </DialogDescription>
+          </DialogHeader>
+
+          <div className="space-y-6 text-sm text-foreground">
+            <section className="space-y-2">
+              <h3 className="text-lg font-semibold text-primary">Presentation Preparation</h3>
+              <p className="text-muted-foreground">
+                Through Stages 1 and 2, you have developed a robust solution to a real-world problem using communication technology. Stage 3 focuses on presenting that solution.
+              </p>
+              <p className="text-muted-foreground">Include the following when preparing your presentation:</p>
+              <ul className="list-disc pl-5 space-y-1 text-muted-foreground">
+                <li>Title</li>
+                <li>Introduce your team and members</li>
+                <li>Summarize the key report content</li>
+                <li>Problem statement</li>
+                <li>Solution (methodology and implementation)</li>
+                <li>Use of communication technology in the solution</li>
+                <li>Feasibility, challenges, budget (if possible)</li>
+              </ul>
+            </section>
+
+            <section className="space-y-2">
+              <h3 className="text-lg font-semibold text-primary">Presentation Guidelines</h3>
+              <ul className="list-disc pl-5 space-y-1 text-muted-foreground">
+                <li>You can use any tools or software to prepare the presentation.</li>
+                <li>Presentation time must not exceed 10 minutes.</li>
+                <li>If in a team, members can present different sections.</li>
+                <li>A 10-minute Q&A session with the judge panel follows the presentation.</li>
+              </ul>
+            </section>
+
+            <section className="space-y-2">
+              <h3 className="text-lg font-semibold text-primary">Evaluation Date and Venue</h3>
+              <p className="text-muted-foreground">
+                The final round of ComFix2024 will take place in the ENTC1 hall of the Electronic and Telecommunication Department at the University of Moratuwa. Date will be announced later.
+              </p>
+            </section>
+          </div>
+        </DialogContent>
+      </Dialog>
       <Footer />
     </div>
   );

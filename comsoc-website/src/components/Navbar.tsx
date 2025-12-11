@@ -34,7 +34,7 @@ export function Navbar() {
         "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
         isScrolled
           ? "bg-[#ffff]/85 backdrop-blur-md shadow-md py-3"
-          : "bg-[#005485]/85 py-5"
+          : "bg-[#005485]/85 py-5 border-b-[3px] border-white"
       )}
     >
       <div className="container-max section-padding">
