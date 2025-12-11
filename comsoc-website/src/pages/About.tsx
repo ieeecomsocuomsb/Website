@@ -1,27 +1,42 @@
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
-import { Target, Eye, Lightbulb, Users, Radio, Wifi, Satellite, Smartphone } from "lucide-react";
+import {
+  Target,
+  Eye,
+  Lightbulb,
+  Users,
+  Globe2,
+  BookOpen,
+  FlaskConical,
+  Award,
+  GraduationCap,
+} from "lucide-react";
 
 const impactAreas = [
   {
-    icon: Radio,
-    title: "Wireless Communications",
-    description: "Exploring 5G, IoT, and next-generation wireless technologies",
+    icon: Globe2,
+    title: "Global network",
+    description: "Connect with thousands of professionals, researchers, and students worldwide.",
   },
   {
-    icon: Wifi,
-    title: "Network Engineering",
-    description: "Understanding network protocols, security, and infrastructure",
+    icon: BookOpen,
+    title: "Access to Knowledge",
+    description: "Gain exposure to high-quality journals, magazines, conferences, and technical resources in communications and networking.",
   },
   {
-    icon: Satellite,
-    title: "Signal Processing",
-    description: "Digital and analog signal processing techniques",
+    icon: FlaskConical,
+    title: "Innovation & Research",
+    description: "Stay at the forefront of emerging technologies such as wireless communications, networking, security, and signal processing.",
   },
   {
-    icon: Smartphone,
-    title: "Mobile Technologies",
-    description: "Mobile computing, apps, and communication systems",
+    icon: Award,
+    title: "Recognition & Leadership",
+    description: "Engage in volunteering, leadership roles, and awards that recognize technical and professional excellence.",
+  },
+  {
+    icon: GraduationCap,
+    title: "Student Empowerment",
+    description: "Build skills, industry awareness, and global exposure that prepare students for successful careers.",
   },
 ];
 
@@ -62,11 +77,7 @@ const About = () => {
                 </div>
                 <h2 className="text-2xl font-bold text-foreground mb-4">Our Mission</h2>
                 <p className="text-muted-foreground leading-relaxed">
-                  To foster a vibrant community of communication engineering enthusiasts 
-                  at the University of Moratuwa by providing platforms for learning, 
-                  networking, and professional development. We aim to bridge the gap 
-                  between academic knowledge and industry practices through innovative 
-                  programs and collaborative initiatives.
+                  The IEEE Communications Society promotes technological innovation and fosters creation and sharing of information among  the global technical community. The Society provides services to members for their technical and professional advancement and forums for technical exchanges among professionals in academia, industry, and public institutions.
                 </p>
               </div>
 
@@ -77,11 +88,9 @@ const About = () => {
                 </div>
                 <h2 className="text-2xl font-bold text-foreground mb-4">Our Vision</h2>
                 <p className="text-muted-foreground leading-relaxed">
-                  To be the premier student chapter that inspires and empowers the next 
-                  generation of communication engineers in Sri Lanka. We envision a 
-                  community where students can explore cutting-edge technologies, develop 
-                  leadership skills, and contribute to the advancement of communication 
-                  systems globally.
+                  To bring the world together in harmony through communications and networking technology research, application, education, and incubation of new ideas.
+
+
                 </p>
               </div>
             </div>
@@ -92,20 +101,15 @@ const About = () => {
         <section className="py-20 bg-muted/50">
           <div className="container-max section-padding">
             <div className="text-center mb-12">
-              <span className="inline-block text-sm font-semibold text-primary mb-4 tracking-wide uppercase">
-                What We Study
-              </span>
               <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">
-                Communication Engineering
+                Why <span className="text-primary">IEEE ComSoc</span> ?
               </h2>
               <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-                Communication engineering is the backbone of our connected world, 
-                enabling everything from smartphone calls to satellite communications 
-                and the Internet of Things.
+                IEEE ComSoc offers unparalleled opportunities for learning, collaboration and professional development in the field of communications technology.
               </p>
             </div>
 
-            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 ">
               {impactAreas.map((area, index) => (
                 <div
                   key={area.title}
@@ -118,6 +122,53 @@ const About = () => {
                   <p className="text-sm text-muted-foreground">{area.description}</p>
                 </div>
               ))}
+            </div>
+            <div className="text-center mt-12">
+              <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+                By being part of IEEE ComSoc, students and professionals become contributors to a global effort that connects the world through technology.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* Field of Interest */}
+        <section className="py-20 bg-muted/30">
+          <div className="container-max section-padding">
+            <div className="grid lg:grid-cols-1 gap-12 items-start">
+              <div>
+                <span className="inline-block text-sm font-semibold text-primary mb-3 tracking-wide uppercase">
+                  Field of Interest
+                </span>
+                <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">
+                  Communications at the Core
+                </h2>
+                <p className="text-muted-foreground leading-relaxed">
+                  The IEEE Communications Society advances the science, technology, applications, and standards for organizing,
+                  <br /> transmitting, and securing information over electronic, optical, and wireless channels and networks.
+                </p>
+              </div>
+
+              <div className="grid sm:grid-cols-2 gap-4 text-muted-foreground text-sm">
+                {[
+                  "Systems and network architecture, control, and management",
+                  "Protocols, software, and middleware",
+                  "Quality of service, reliability, and security",
+                  "Modulation, detection, coding, and signaling",
+                  "Switching and routing",
+                  "Mobile and portable communications",
+                  "Terminals and other end devices",
+                  "Networks for content distribution and distributed computing",
+                  "Communications-based distributed resources control",
+                ].map((item) => (
+                  <div
+                    key={item}
+                    className="flex items-start gap-2 bg-card rounded-lg p-3 shadow-sm"
+                  >
+                    <span className="mt-1 h-2 w-2 rounded-full bg-primary" aria-hidden />
+                    <span>{item}</span>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </section>
@@ -135,21 +186,7 @@ const About = () => {
                 </h2>
                 <div className="space-y-4 text-muted-foreground leading-relaxed">
                   <p>
-                    The IEEE Communication Society Student Branch Chapter at the University 
-                    of Moratuwa was established with the goal of creating a dynamic 
-                    platform for students interested in communication technologies.
-                  </p>
-                  <p>
-                    Our chapter organizes a variety of activities including technical 
-                    workshops, guest lectures, industry visits, hackathons, and networking 
-                    events. These initiatives help students stay updated with the latest 
-                    trends in communication engineering while building valuable connections 
-                    with industry professionals.
-                  </p>
-                  <p>
-                    As part of the global IEEE network, our members have access to vast 
-                    resources, publications, and opportunities for collaboration with 
-                    peers worldwide.
+                    Founded in 2015, the University of Moratuwa IEEE Communication Society has emerged as a dynamic hub for students, researchers, and professionals passionate about advancing communication technologies. Our journey has been marked by milestones that reflect our commitment to innovation, collaboration, and the pursuit of knowledge. 
                   </p>
                 </div>
               </div>

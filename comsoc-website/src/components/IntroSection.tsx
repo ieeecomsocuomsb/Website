@@ -25,12 +25,8 @@ export function IntroSection() {
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Content */}
           <div>
-            <span className="inline-block text-sm font-semibold text-primary mb-4 tracking-wide uppercase">
-              Who We Are
-            </span>
-            <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-6 leading-tight">
-              Shaping the Future of{" "}
-              <span className="text-gradient">Communication Engineering</span>
+            <h2 className="text-3xl sm:text-4xl font-bold mb-6 text-foreground">
+              <span className="text-gradient">WHO WE ARE ?</span>
             </h2>
             <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
                 The IEEE Communications Society (IEEE ComSoc) is a leading global professional community dedicated to the advancement of communications and networking technologies.

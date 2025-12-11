@@ -51,10 +51,10 @@ export function Footer() {
               <li className="flex items-start gap-3">
                 <Mail size={18} className="text-primary mt-0.5" />
                 <a
-                  href="mailto:comsoc@ieee.uom.lk"
+                  href="mailto:ieeecomsocuomsb@gmail.com"
                   className="text-background/70 hover:text-primary transition-colors"
                 >
-                  comsoc@ieee.uom.lk
+                  ieeecomsocuomsb@gmail.com
                 </a>
               </li>
               <li className="flex items-start gap-3">
