@@ -136,6 +136,14 @@
     @apply content-[''] absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300;
   }
 
+  .nav-link-unscrolled::after {
+    @apply bg-white;
+  }
+
+  .nav-link-scrolled::after {
+    @apply bg-primary;
+  }
+
   .nav-link:hover::after,
   .nav-link.active::after {
     @apply w-full;

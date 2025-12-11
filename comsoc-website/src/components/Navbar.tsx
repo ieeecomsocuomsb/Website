@@ -33,22 +33,32 @@ export function Navbar() {
       className={cn(
         "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
         isScrolled
-          ? "bg-card/95 backdrop-blur-md shadow-md py-3"
-          : "bg-transparent py-5"
+          ? "bg-[#ffff]/95 backdrop-blur-md shadow-md py-3"
+          : "bg-[#005485] py-5"
       )}
     >
       <div className="container-max section-padding">
         <div className="flex items-center justify-between">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-3 group">
-            <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center shadow-md group-hover:shadow-lg transition-shadow">
-              <span className="text-primary-foreground font-bold text-lg">C</span>
+            <div className="w-10 h-10 bg-[#005485] rounded-lg flex items-center justify-center shadow-[0_1px_5px_rgba(255,255,255,0.35)] group-hover:shadow-[0_6px_20px_rgba(255,255,255,0.45)] transition-shadow">
+              <img src="/favicon.png" alt="Logo" className="w-6 h-6" />
             </div>
             <div className="hidden sm:block">
-              <p className="text-sm font-semibold text-foreground leading-tight">
+                <p
+                className={cn(
+                  "text-sm font-semibold leading-tight",
+                  isScrolled ? "text-[#005485]" : "text-white"
+                )}
+                >
                 IEEE ComSoc
-              </p>
-              <p className="text-xs text-muted-foreground">
+                </p>
+              <p 
+              className={cn(
+                "text-xs",
+                isScrolled ? "text-muted-foreground" : "text-[#a9aeb1]"
+                )}
+              >
                 University of Moratuwa
               </p>
             </div>
@@ -61,8 +71,13 @@ export function Navbar() {
                 key={link.path}
                 to={link.path}
                 className={cn(
-                  "nav-link py-1",
-                  location.pathname === link.path && "text-primary active"
+                  "nav-link py-1 transition-colors",
+                  isScrolled ? "nav-link-scrolled" : "nav-link-unscrolled",
+                  isScrolled
+                    ? "text-foreground hover:text-primary"
+                    : "text-muted-foreground hover:text-white",
+                  location.pathname === link.path &&
+                    (isScrolled ? "text-primary" : "text-white")
                 )}
               >
                 {link.name}
