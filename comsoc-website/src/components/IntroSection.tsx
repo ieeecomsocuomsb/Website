@@ -33,11 +33,10 @@ export function IntroSection() {
               <span className="text-gradient">Communication Engineering</span>
             </h2>
             <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-              The IEEE Communication Society Student Branch Chapter at the University 
-              of Moratuwa is dedicated to fostering excellence in communication 
-              engineering education. We bridge the gap between academic learning and 
-              real-world applications through innovative programs and collaborative 
-              initiatives.
+                The IEEE Communications Society (IEEE ComSoc) is a leading global professional community dedicated to the advancement of communications and networking technologies.
+                With members across 140+ countries, IEEE ComSoc brings together engineers, researchers, academics, industry professionals, and students who share a common goal to innovate, collaborate, and shape the future of communication technologies.
+                Through research, publications, conferences, standards development, and technical activities, ComSoc fosters knowledge sharing and professional growth while contributing to technological progress that benefits humanity.
+                As part of this global network, the IEEE ComSoc Student Branch Chapter of the University of Moratuwa connects students to international expertise, industry trends, and cutting-edge research in communications engineering.
             </p>
 
             <ul className="space-y-4">
