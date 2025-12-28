@@ -68,7 +68,7 @@ const ComFix24Event = () => {
         </section>
 
         {/* Image Carousel */}
-        <section className="py-16 bg-background">
+        {/* <section className="py-16 bg-background">
           <div className="container-max section-padding">
             <Carousel className="w-full max-w-4xl mx-auto">
               <CarouselContent>
@@ -88,7 +88,7 @@ const ComFix24Event = () => {
               <CarouselNext className="right-4" />
             </Carousel>
           </div>
-        </section>
+        </section> */}
 
         {/* Event Details */}
         <section className="py-16 bg-muted/50">

@@ -63,7 +63,7 @@ const AGMEvent = () => {
         </section>
 
         {/* Image Carousel */}
-        <section className="py-16 bg-background">
+        {/* <section className="py-16 bg-background">
           <div className="container-max section-padding">
             <Carousel className="w-full max-w-4xl mx-auto">
               <CarouselContent>
@@ -73,7 +73,7 @@ const AGMEvent = () => {
                       <img
                         src={img}
                         alt={`AGM highlight ${index + 1}`}
-                        className="w-full h-full object-cover"
+                        className="w-full h-full object-cover object-top"
                       />
                     </div>
                   </CarouselItem>
@@ -83,7 +83,7 @@ const AGMEvent = () => {
               <CarouselNext className="right-4" />
             </Carousel>
           </div>
-        </section>
+        </section> */}
 
         {/* Event Details */}
         <section className="py-16 bg-muted/50">
@@ -161,7 +161,7 @@ const AGMEvent = () => {
                   <img
                     src={img}
                     alt={`AGM gallery ${index + 1}`}
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                    className="w-full h-full object-cover object-top group-hover:scale-110 transition-transform duration-500"
                   />
                 </div>
               ))}
