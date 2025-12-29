@@ -22,6 +22,8 @@ import {
 } from "@/components/ui/dialog";
 import comfix1 from "@/assets/comfix_2025/IMG_3302.JPG";
 import comfix2 from "@/assets/comfix_2025/IMG_3304.JPG";
+import agmImage from "@/assets/AGM/AGM-1.jpeg";
+import fieldVisitImage from "@/assets/FieldVisit/FV-1.JPG";
 
 const upcomingEvents = [
   {
@@ -73,8 +75,7 @@ const pastEvents = [
     attendees: 45,
     highlights:
       "Hands-on exposure to Sri Lanka’s core digital infrastructure: uptime, security, server environments, and network operations.",
-    image:
-      "https://images.unsplash.com/photo-1560472355-536de3962603?w=400&h=300&fit=crop",
+    image: fieldVisitImage,
     slug: "field-visit",
   },
   {
