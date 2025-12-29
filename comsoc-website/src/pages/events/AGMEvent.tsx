@@ -45,10 +45,10 @@ const AGMEvent = () => {
                   <Calendar size={18} />
                   2024
                 </span>
-                <span className="flex items-center gap-2">
+                {/* <span className="flex items-center gap-2">
                   <Users size={18} />
                   150+ Attendees
-                </span>
+                </span> */}
               </div>
             </div>
           </div>

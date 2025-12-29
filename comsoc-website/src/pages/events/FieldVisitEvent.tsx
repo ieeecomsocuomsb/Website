@@ -42,10 +42,10 @@ const FieldVisitEvent = () => {
                   <Calendar size={18} />
                   2024
                 </span>
-                <span className="flex items-center gap-2">
+                {/* <span className="flex items-center gap-2">
                   <Users size={18} />
                   45+ Attendees
-                </span>
+                </span> */}
                 <span className="flex items-center gap-2">
                   <MapPin size={18} />
                   SLT IDC, Sri Lanka

@@ -46,10 +46,10 @@ const ComFix24Event = () => {
                   <Calendar size={18} />
                   2024
                 </span>
-                <span className="flex items-center gap-2">
+                {/* <span className="flex items-center gap-2">
                   <Users size={18} />
                   100+ Participants
-                </span>
+                </span> */}
                 <span className="flex items-center gap-2">
                   <Award size={18} />
                   First Edition

@@ -46,10 +46,10 @@ const ComFix25Event = () => {
                   <Calendar size={18} />
                   2025
                 </span>
-                <span className="flex items-center gap-2">
+                {/* <span className="flex items-center gap-2">
                   <Users size={18} />
                   120+ Participants
-                </span>
+                </span> */}
                 <span className="flex items-center gap-2">
                   <TrendingUp size={18} />
                   Second Edition
