@@ -84,8 +84,7 @@ const pastEvents = [
     attendees: 100,
     highlights:
       "First edition fostering teamwork and rapid problem‑solving; deconstructed modern communication systems for practical, tech‑driven solutions.",
-    image:
-      "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=400&h=300&fit=crop",
+    image: "/comfix2024.png",
     slug: "comfix-24",
   },
   {
@@ -94,7 +93,7 @@ const pastEvents = [
     attendees: 120,
     highlights:
       "Focused on industry‑oriented challenges in connectivity, network infrastructure, and digital communication; showcased rising interest and technical depth.",
-    image: "/comfix.png",
+    image: "/comfix2025.png",
     slug: "comfix-25",
   },
 ];
