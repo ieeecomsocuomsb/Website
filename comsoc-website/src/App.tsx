@@ -12,6 +12,7 @@ import AGMEvent from "./pages/events/AGMEvent";
 import FieldVisitEvent from "./pages/events/FieldVisitEvent";
 import ComFix24Event from "./pages/events/ComFix24Event";
 import ComFix25Event from "./pages/events/ComFix25Event";
+import ScrollToTop from "./components/ScrollToTop";
 
 const queryClient = new QueryClient();
 
@@ -21,6 +22,7 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
+      <ScrollToTop/>
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/about" element={<About />} />
