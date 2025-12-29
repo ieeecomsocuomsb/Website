@@ -211,7 +211,7 @@ const Events = () => {
           />
           <div className="container-max section-padding relative z-10">
             <div>
-              <img src="/comfix.png" alt="ComFix Logo" className="h-40 mb-4" />
+              <img src="/comfix2025.png" alt="ComFix Logo" className="h-40 mb-4" />
             </div>
             <div className="grid lg:grid-cols-[1.1fr_0.9fr] gap-10 items-center">
               <div className="space-y-4">
