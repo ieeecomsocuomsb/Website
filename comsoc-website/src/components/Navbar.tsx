@@ -41,19 +41,17 @@ export function Navbar() {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-3 group">
-            <img 
-              src={isScrolled ? "/favicon1.png" : "/favicon.png"} 
-              alt="IEEE ComSoc Logo" 
-              className="h-12 w-auto group-hover:scale-105 transition-transform duration-300" 
+            <img
+              src={isScrolled ? "/favicon1.png" : "/favicon.png"}
+              alt="IEEE ComSoc Logo"
+              className="h-12 w-auto group-hover:scale-105 transition-transform duration-300"
             />
             {!isScrolled && (
               <div className="hidden sm:block">
                 <p className="text-sm font-semibold leading-tight text-white">
                   IEEE ComSoc
                 </p>
-                <p className="text-xs text-white/80">
-                  University of Moratuwa
-                </p>
+                <p className="text-xs text-white/80">University of Moratuwa</p>
               </div>
             )}
           </Link>
