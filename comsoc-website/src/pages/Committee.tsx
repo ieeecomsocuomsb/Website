@@ -151,13 +151,13 @@ const Committee = () => {
 											>
 												<Linkedin size={18} />
 											</a>
-											<a
+											{/* <a
 												href="#"
 												className="w-10 h-10 bg-card/90 backdrop-blur-sm rounded-full flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors"
 												aria-label="Email"
 											>
 												<Mail size={18} />
-											</a>
+											</a> */}
 										</div>
 									</div>
 
