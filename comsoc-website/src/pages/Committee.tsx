@@ -141,7 +141,7 @@ const Committee = () => {
           <div className="container-max section-padding">
             <div className="text-center mb-16">
               <span className="inline-block text-sm font-semibold text-primary mb-4 tracking-wide uppercase">
-                2024/25 Committee
+                2025/26 Committee
               </span>
               <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">
                 Leadership Team
