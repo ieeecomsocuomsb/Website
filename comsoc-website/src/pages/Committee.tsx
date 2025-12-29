@@ -196,26 +196,25 @@ const Committee = () => {
           </div>
         </section>
 
-        {/* Join CTA */}
+        {/* Contact CTA */}
         <section className="py-20 bg-muted/50">
           <div className="container-max section-padding">
             <div className="bg-primary rounded-2xl p-10 md:p-16 text-center relative overflow-hidden">
               <div className="absolute inset-0 network-pattern opacity-20" />
               <div className="relative z-10">
                 <h2 className="text-3xl sm:text-4xl font-bold text-primary-foreground mb-4">
-                  Want to Join the Team?
+                  Want to Contact Us?
                 </h2>
                 <p className="text-lg text-primary-foreground/80 mb-8 max-w-2xl mx-auto">
-                  We're always looking for passionate individuals to contribute
-                  to our chapter. Reach out to learn about upcoming
-                  opportunities.
+                  Have questions, suggestions, or want to collaborate? We'd love
+                  to hear from you. Reach out to us anytime!
                 </p>
                 <a
                   href="mailto:ieeecomsocuomsb@gmail.com"
                   className="inline-flex items-center gap-2 bg-primary-foreground text-primary px-8 py-3 rounded-lg font-semibold hover:bg-primary-foreground/90 transition-colors"
                 >
                   <Mail size={20} />
-                  Contact Us
+                  Get in Touch
                 </a>
               </div>
             </div>
