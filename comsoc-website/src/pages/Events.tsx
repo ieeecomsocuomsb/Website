@@ -328,8 +328,8 @@ const Events = () => {
                     </p>
                     <div className="flex items-center justify-between">
                       <div className="flex items-center gap-2 text-sm text-primary">
-                        <Users size={14} />
-                        <span>{event.attendees} Attendees</span>
+                        {/* <Users size={14} />
+                        <span>{event.attendees} Attendees</span> */}
                       </div>
                       <Link to={`/events/${event.slug}`}>
                         <Button variant="outline" size="sm">
