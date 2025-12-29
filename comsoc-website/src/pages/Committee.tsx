@@ -9,6 +9,7 @@ const committeeMembers = [
 		department: "Electronics & Telecom Engineering",
 		bio: "Leading the chapter with a vision to connect students with industry leaders and cutting-edge research.",
 		image: "src/assets/committee/Praveen.webp",
+		linkedin: "https://www.linkedin.com/in/dmpcd/",
 	},
 	{
 		name: "Thevindu Kalubowila",
@@ -16,6 +17,7 @@ const committeeMembers = [
 		department: "Electronics & Telecom Engineering",
 		bio: "Passionate about wireless communications and dedicated to organizing impactful technical events.",
 		image: "src/assets/committee/Thevindu.webp",
+		linkedin: "https://www.linkedin.com/in/thevindu-kalubowila/",
 	},
 	{
 		name: "Mihiran Wikramarathne",
@@ -23,6 +25,7 @@ const committeeMembers = [
 		department: "Electronics & Telecom Engineering",
 		bio: "Ensuring smooth operations, clear communication, and timely coordination across teams.",
 		image: "src/assets/committee/Mihiran.webp",
+		linkedin: "https://www.linkedin.com/in/mihiran-wickramarathne/",
 	},
 	{
 		name: "Thaveesha Wathudura",
@@ -30,6 +33,7 @@ const committeeMembers = [
 		department: "Electronics & Telecom Engineering",
 		bio: "Overseeing budgets and partnerships to sustain impactful programs and events.",
 		image: "src/assets/committee/Thaveesha.webp",
+		linkedin: "https://www.linkedin.com/in/thaveesha-wathudura/",
 	},
 	{
 		name: "Warren Jeyakumar",
@@ -37,6 +41,7 @@ const committeeMembers = [
 		department: "Electronics & Telecom Engineering",
 		bio: "Strengthening our public presence through strategic communication and outreach.",
 		image: "src/assets/committee/Warren.webp",
+		linkedin: "https://www.linkedin.com/in/warren-jayakumar/",
 	},
 	{
 		name: "Nipuni Hearath",
@@ -44,6 +49,7 @@ const committeeMembers = [
 		department: "Electronics & Telecom Engineering",
 		bio: "Optimizing workflows and logistics to deliver seamless event experiences.",
 		image: "src/assets/committee/Nipuni.webp",
+		linkedin: "https://www.linkedin.com/in/nipuni-herath-928b72243/",
 	},
 	{
 		name: "Thusajini Ahilakumaran",
@@ -51,6 +57,7 @@ const committeeMembers = [
 		department: "Electronics & Telecom Engineering",
 		bio: "Supporting documentation, scheduling, and team coordination with precision.",
 		image: "src/assets/committee/Thusajini.webp",
+		linkedin: "https://www.linkedin.com/in/thusajiny-ahilakumaran-646008343/",
 	},
 	{
 		name: "Mathisha Buwaneka",
@@ -58,6 +65,7 @@ const committeeMembers = [
 		department: "Electronics & Telecom Engineering",
 		bio: "Managing financial tracking and sponsor relations to back key initiatives.",
 		image: "src/assets/committee/Mathisha.webp",
+		linkedin: "https://www.linkedin.com/in/mathisha-buwaneka-francisku-arachchi-5b3813221/",
 	},
 	{
 		name: "Anusan Krishnathas",
@@ -65,20 +73,21 @@ const committeeMembers = [
 		department: "Computer Science and Engineering",
 		bio: "Maintaining our web presence, performance, and content updates.",
 		image: "src/assets/committee/Anusan.webp",
+		linkedin: "https://www.linkedin.com/in/anusan-krishnathas-413732288/",
 	},
 	{
 		name: "Piyumi Pathinayake",
 		position: "Editor",
 		department: "Information Technology and Management",
 		bio: "Editing and curating narratives that highlight our community’s achievements.",
-		image: "src/assets/committee/Piyumi.webp",
-	},
+		image: "src/assets/committee/Piyumi.webp",		linkedin: "https://www.linkedin.com/in/piyumi-pathinayake/",	},
 	{
 		name: "Lasith Undulanga",
 		position: "Designer",
 		department: "Information Technology and Management",
 		bio: "Crafting visual identities and assets that elevate our brand experience.",
 		image: "src/assets/committee/Lasith.webp",
+		linkedin: "https://www.linkedin.com/in/lasith-undulanga-964067308/",
 	},
 ];
 
@@ -145,7 +154,9 @@ const Committee = () => {
 										{/* Social Links Overlay */}
 										<div className="absolute bottom-4 left-0 right-0 flex justify-center gap-3 opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all duration-300">
 											<a
-												href="#"
+												href={member.linkedin}
+												target="_blank"
+												rel="noopener noreferrer"
 												className="w-10 h-10 bg-card/90 backdrop-blur-sm rounded-full flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors"
 												aria-label="LinkedIn"
 											>
