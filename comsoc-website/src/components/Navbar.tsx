@@ -41,27 +41,19 @@ export function Navbar() {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-3 group">
-            <div className="w-10 h-10 bg-[#005485] rounded-lg flex items-center justify-center shadow-[0_1px_5px_rgba(255,255,255,0.35)] group-hover:shadow-[0_6px_20px_rgba(255,255,255,0.45)] transition-shadow">
-              <img src="/favicon.png" alt="Logo" className="w-6 h-6" />
-            </div>
-            <div className="hidden sm:block">
-                <p
-                className={cn(
-                  "text-sm font-semibold leading-tight",
-                  isScrolled ? "text-[#005485]" : "text-white"
-                )}
-                >
-                IEEE ComSoc
+            <img
+              src={isScrolled ? "/favicon1.png" : "/favicon.png"}
+              alt="IEEE ComSoc Logo"
+              className="h-12 w-auto group-hover:scale-105 transition-transform duration-300"
+            />
+            {!isScrolled && (
+              <div className="hidden sm:block">
+                <p className="text-sm font-semibold leading-tight text-white">
+                  IEEE ComSoc
                 </p>
-              <p 
-              className={cn(
-                "text-xs",
-                isScrolled ? "text-muted-foreground" : "text-[#a9aeb1]"
-                )}
-              >
-                University of Moratuwa
-              </p>
-            </div>
+                <p className="text-xs text-white/80">University of Moratuwa</p>
+              </div>
+            )}
           </Link>
 
           {/* Desktop Navigation */}
@@ -89,7 +81,10 @@ export function Navbar() {
           <Button
             variant="ghost"
             size="icon"
-            className="md:hidden"
+            className={cn(
+              "md:hidden",
+              isScrolled ? "text-foreground" : "text-white hover:bg-white/10"
+            )}
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             aria-label="Toggle menu"
           >
