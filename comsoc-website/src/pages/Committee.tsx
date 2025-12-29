@@ -37,7 +37,7 @@ const committeeMembers = [
     position: "Secretary",
     department: "Electronics & Telecom Engineering",
     bio: "Ensuring smooth operations, clear communication, and timely coordination across teams.",
-    image: "src/assets/committee/Mihiran.webp",
+    image: mihiranImg,
     linkedin: "https://www.linkedin.com/in/mihiran-wickramarathne/",
   },
   {
@@ -45,7 +45,7 @@ const committeeMembers = [
     position: "Treasurer",
     department: "Electronics & Telecom Engineering",
     bio: "Overseeing budgets and partnerships to sustain impactful programs and events.",
-    image: "src/assets/committee/Thaveesha.webp",
+    image: thaveeshaImg,
     linkedin: "https://www.linkedin.com/in/thaveesha-wathudura/",
   },
   {
@@ -53,7 +53,7 @@ const committeeMembers = [
     position: "Head of PR",
     department: "Electronics & Telecom Engineering",
     bio: "Strengthening our public presence through strategic communication and outreach.",
-    image: "src/assets/committee/Warren.webp",
+    image: warrenImg,
     linkedin: "https://www.linkedin.com/in/warren-jayakumar/",
   },
   {
@@ -61,7 +61,7 @@ const committeeMembers = [
     position: "Head of Operations",
     department: "Electronics & Telecom Engineering",
     bio: "Optimizing workflows and logistics to deliver seamless event experiences.",
-    image: "src/assets/committee/Nipuni.webp",
+    image: nipuniImg,
     linkedin: "https://www.linkedin.com/in/nipuni-herath-928b72243/",
   },
   {
@@ -69,7 +69,7 @@ const committeeMembers = [
     position: "Assistant Secretary",
     department: "Electronics & Telecom Engineering",
     bio: "Supporting documentation, scheduling, and team coordination with precision.",
-    image: "src/assets/committee/Thusajini.webp",
+    image: thusajiniImg,
     linkedin: "https://www.linkedin.com/in/thusajiny-ahilakumaran-646008343/",
   },
   {
@@ -77,7 +77,7 @@ const committeeMembers = [
     position: "Assistant Treasurer",
     department: "Electronics & Telecom Engineering",
     bio: "Managing financial tracking and sponsor relations to back key initiatives.",
-    image: "src/assets/committee/Mathisha.webp",
+    image: mathishaImg,
     linkedin:
       "https://www.linkedin.com/in/mathisha-buwaneka-francisku-arachchi-5b3813221/",
   },
@@ -86,7 +86,7 @@ const committeeMembers = [
     position: "Web Master",
     department: "Computer Science and Engineering",
     bio: "Maintaining our web presence, performance, and content updates.",
-    image: "src/assets/committee/Anusan.webp",
+    image: anusanImg,
     linkedin: "https://www.linkedin.com/in/anusan-krishnathas-413732288/",
   },
   {
@@ -94,7 +94,7 @@ const committeeMembers = [
     position: "Editor",
     department: "Information Technology and Management",
     bio: "Editing and curating narratives that highlight our community’s achievements.",
-    image: "src/assets/committee/Piyumi.webp",
+    image: piyumiImg,
     linkedin: "https://www.linkedin.com/in/piyumi-pathinayake/",
   },
   {
@@ -102,7 +102,7 @@ const committeeMembers = [
     position: "Designer",
     department: "Information Technology and Management",
     bio: "Crafting visual identities and assets that elevate our brand experience.",
-    image: "src/assets/committee/Lasith.webp",
+    image: lasithImg,
     linkedin: "https://www.linkedin.com/in/lasith-undulanga-964067308/",
   },
 ];
