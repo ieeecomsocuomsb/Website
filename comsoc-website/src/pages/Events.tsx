@@ -94,8 +94,7 @@ const pastEvents = [
     attendees: 120,
     highlights:
       "Focused on industry‑oriented challenges in connectivity, network infrastructure, and digital communication; showcased rising interest and technical depth.",
-    image:
-      "./comfix.png",
+    image: "./comfix.png",
     slug: "comfix-25",
   },
 ];

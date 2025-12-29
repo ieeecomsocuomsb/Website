@@ -2,13 +2,26 @@ import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { Linkedin, Mail } from "lucide-react";
 
+// Import committee member images
+import praveenImg from "@/assets/committee/Praveen.webp";
+import thevinduImg from "@/assets/committee/Thevindu.webp";
+import mihiranImg from "@/assets/committee/Mihiran.webp";
+import thaveeshaImg from "@/assets/committee/Thaveesha.webp";
+import warrenImg from "@/assets/committee/Warren.webp";
+import nipuniImg from "@/assets/committee/Nipuni.webp";
+import thusajiniImg from "@/assets/committee/Thusajini.webp";
+import mathishaImg from "@/assets/committee/Mathisha.webp";
+import anusanImg from "@/assets/committee/Anusan.webp";
+import piyumiImg from "@/assets/committee/Piyumi.webp";
+import lasithImg from "@/assets/committee/Lasith.webp";
+
 const committeeMembers = [
   {
     name: "Praveen Disanayaka",
     position: "Chairman",
     department: "Electronics & Telecom Engineering",
     bio: "Leading the chapter with a vision to connect students with industry leaders and cutting-edge research.",
-    image: "src/assets/committee/Praveen.webp",
+    image: praveenImg,
     linkedin: "https://www.linkedin.com/in/dmpcd/",
   },
   {
@@ -16,7 +29,7 @@ const committeeMembers = [
     position: "Vice Chairman",
     department: "Electronics & Telecom Engineering",
     bio: "Passionate about wireless communications and dedicated to organizing impactful technical events.",
-    image: "src/assets/committee/Thevindu.webp",
+    image: thevinduImg,
     linkedin: "https://www.linkedin.com/in/thevindu-kalubowila/",
   },
   {
