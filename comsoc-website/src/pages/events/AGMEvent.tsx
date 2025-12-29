@@ -73,7 +73,7 @@ const AGMEvent = () => {
                       <img
                         src={img}
                         alt={`AGM highlight ${index + 1}`}
-                        className="w-full h-full object-cover object-top"
+                        className="w-full h-full object-cover"
                       />
                     </div>
                   </CarouselItem>
@@ -161,7 +161,7 @@ const AGMEvent = () => {
                   <img
                     src={img}
                     alt={`AGM gallery ${index + 1}`}
-                    className="w-full h-full object-cover object-top group-hover:scale-110 transition-transform duration-500"
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                   />
                 </div>
               ))}
