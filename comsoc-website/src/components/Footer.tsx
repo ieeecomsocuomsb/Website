@@ -108,7 +108,7 @@ export function Footer() {
         {/* Bottom Bar */}
         <div className="border-t border-background/10 mt-12 pt-8 flex flex-col sm:flex-row justify-between items-center gap-4 ">
           <p className="text-sm text-background/60">
-            © {new Date().getFullYear()} IEEE Communication Society UoM. All
+            © {new Date().getFullYear()}/26 IEEE Communication Society UoM. All
             rights reserved.
           </p>
         </div>
