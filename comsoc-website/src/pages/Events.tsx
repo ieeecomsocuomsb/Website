@@ -11,6 +11,8 @@ import {
   Award,
   BookOpen,
   Sparkles,
+  ExternalLink,
+  Camera,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
@@ -61,22 +63,24 @@ const upcomingEvents = [
 const pastEvents = [
   {
     title: "Annual General Meeting (AGM)",
-    date: "2024",
+    date: "2025",
     attendees: 150,
     highlights:
       "Celebrated outgoing committee and welcomed new leadership; highlighted achievements including ComFix and key industrial visits.",
     image:
       "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=400&h=300&fit=crop",
     slug: "agm",
+    galleryLink: "https://www.facebook.com/share/p/1DNxLpciPa/",
   },
   {
     title: "Field Visit: SLT IDC National Data Center",
-    date: "2024",
+    date: "2025",
     attendees: 45,
     highlights:
       "Hands-on exposure to Sri Lanka’s core digital infrastructure: uptime, security, server environments, and network operations.",
     image: fieldVisitImage,
     slug: "field-visit",
+    galleryLink: "https://www.facebook.com/share/p/1BfsoXa5xJ/",
   },
   {
     title: "ComFix’24 – Inaugural Ideathon",
@@ -86,6 +90,7 @@ const pastEvents = [
       "First edition fostering teamwork and rapid problem‑solving; deconstructed modern communication systems for practical, tech‑driven solutions.",
     image: "/comfix2024.png",
     slug: "comfix-24",
+    galleryLink: "https://www.facebook.com/share/p/1BSrH7MdPk/",
   },
   {
     title: "ComFix’25 – Advanced Ideathon",
@@ -95,6 +100,7 @@ const pastEvents = [
       "Focused on industry‑oriented challenges in connectivity, network infrastructure, and digital communication; showcased rising interest and technical depth.",
     image: "/comfix2025.png",
     slug: "comfix-25",
+    galleryLink: "https://www.facebook.com/share/p/1Cf9MRGjmq/",
   },
 ];
 
@@ -267,21 +273,15 @@ const Events = () => {
                     <h3 className="font-semibold text-foreground mb-2 group-hover:text-primary transition-colors">
                       {event.title}
                     </h3>
-                    <p className="text-sm text-muted-foreground mb-3">
+                    <p className="text-sm text-muted-foreground mb-4">
                       {event.highlights}
                     </p>
-                    <div className="flex items-center justify-between">
-                      <div className="flex items-center gap-2 text-sm text-primary">
-                        {/* <Users size={14} />
-                        <span>{event.attendees} Attendees</span> */}
-                      </div>
-                      <Link to={`/events/${event.slug}`}>
-                        <Button variant="outline" size="sm">
-                          More
-                          <ArrowRight size={14} className="ml-1" />
-                        </Button>
-                      </Link>
-                    </div>
+                    <Link to={`/events/${event.slug}`}>
+                      <Button variant="outline" className="w-full">
+                        Learn More
+                        <ArrowRight size={14} className="ml-2" />
+                      </Button>
+                    </Link>
                   </div>
                 </div>
               ))}

@@ -1,7 +1,7 @@
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
-import { ArrowLeft, Calendar, Users, MapPin } from "lucide-react";
+import { ArrowLeft, Calendar, Users, MapPin, ExternalLink, Camera } from "lucide-react";
 import { Link } from "react-router-dom";
 import {
   Carousel,
@@ -14,6 +14,8 @@ import {
 import fv1 from "@/assets/FieldVisit/FV-1.JPG";
 
 const images = [fv1];
+
+const GALLERY_LINK = "https://www.facebook.com/share/p/1BfsoXa5xJ/";
 
 const FieldVisitEvent = () => {
   return (
@@ -40,7 +42,7 @@ const FieldVisitEvent = () => {
               <div className="flex flex-wrap gap-4 text-primary-foreground/80 animate-fade-in-up animation-delay-100">
                 <span className="flex items-center gap-2">
                   <Calendar size={18} />
-                  2024
+                  2025
                 </span>
                 {/* <span className="flex items-center gap-2">
                   <Users size={18} />
@@ -148,6 +150,30 @@ const FieldVisitEvent = () => {
                   in network engineering and data center management.
                 </p>
               </div>
+            </div>
+          </div>
+        </section>
+
+        {/* View Full Gallery CTA */}
+        <section className="py-12 bg-muted/50">
+          <div className="container-max section-padding">
+            <div className="max-w-xl mx-auto text-center">
+              <h3 className="text-xl font-bold text-foreground mb-4">
+                Want to see more photos?
+              </h3>
+              <p className="text-muted-foreground mb-6">
+                Check out the complete photo gallery from the SLT Data Center visit on our Facebook page.
+              </p>
+              <a
+                href={GALLERY_LINK}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center gap-2 py-3 px-8 bg-gradient-to-r from-[#1877F2] to-[#0866FF] text-white font-medium rounded-xl hover:from-[#166FE5] hover:to-[#0756E0] transition-all hover:shadow-lg hover:shadow-blue-500/25 group"
+              >
+                <Camera size={20} className="group-hover:scale-110 transition-transform" />
+                View Full Gallery on Facebook
+                <ExternalLink size={16} className="ml-1 opacity-70" />
+              </a>
             </div>
           </div>
         </section>

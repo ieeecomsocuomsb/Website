@@ -1,7 +1,7 @@
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
-import { ArrowLeft, Calendar, Users, Award, Lightbulb } from "lucide-react";
+import { ArrowLeft, Calendar, Users, Award, Lightbulb, ExternalLink, Camera } from "lucide-react";
 import { Link } from "react-router-dom";
 import {
   Carousel,
@@ -18,6 +18,8 @@ import img4 from "@/assets/comfix 2024/IMG_3312.JPG";
 import img5 from "@/assets/comfix 2024/IMG_3313.JPG";
 
 const images = [img1, img2, img3, img4, img5];
+
+const GALLERY_LINK = "https://www.facebook.com/share/p/1BSrH7MdPk/";
 
 const ComFix24Event = () => {
   return (
@@ -175,6 +177,30 @@ const ComFix24Event = () => {
                   solutions.
                 </p>
               </div>
+            </div>
+          </div>
+        </section>
+
+        {/* View Full Gallery CTA */}
+        <section className="py-12 bg-muted/50">
+          <div className="container-max section-padding">
+            <div className="max-w-xl mx-auto text-center">
+              <h3 className="text-xl font-bold text-foreground mb-4">
+                Want to see more photos?
+              </h3>
+              <p className="text-muted-foreground mb-6">
+                Check out the complete photo gallery from ComFix'24 on our Facebook page.
+              </p>
+              <a
+                href={GALLERY_LINK}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center gap-2 py-3 px-8 bg-gradient-to-r from-[#1877F2] to-[#0866FF] text-white font-medium rounded-xl hover:from-[#166FE5] hover:to-[#0756E0] transition-all hover:shadow-lg hover:shadow-blue-500/25 group"
+              >
+                <Camera size={20} className="group-hover:scale-110 transition-transform" />
+                View Full Gallery on Facebook
+                <ExternalLink size={16} className="ml-1 opacity-70" />
+              </a>
             </div>
           </div>
         </section>
