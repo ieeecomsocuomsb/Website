@@ -67,7 +67,7 @@ export function Navbar() {
                   isScrolled ? "nav-link-scrolled" : "nav-link-unscrolled",
                   isScrolled
                     ? "text-foreground hover:text-primary"
-                    : "text-muted-foreground hover:text-white",
+                    : "text-white/90 hover:text-white",
                   location.pathname === link.path &&
                     (isScrolled ? "text-primary" : "text-white")
                 )}
