@@ -203,78 +203,28 @@ const Events = () => {
           </div>
         </section> */}
 
-        {/* ComFix Spotlight */}
+        {/* No Current Events Section */}
         <section className="py-20 bg-background relative overflow-hidden">
           <div
             className="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_20%_20%,#005485_0,transparent_35%),radial-gradient(circle_at_80%_10%,#00a0e0_0,transparent_30%)]"
             aria-hidden
           />
           <div className="container-max section-padding relative z-10">
-            <div>
-              <img src="/comfix2025.png" alt="ComFix Logo" className="h-40 mb-4" />
-            </div>
-            <div className="grid lg:grid-cols-[1.1fr_0.9fr] gap-10 items-center">
-              <div className="space-y-4">
-                {/* <div className="inline-flex items-center gap-2 bg-primary/10 text-primary rounded-full px-4 py-2 text-sm font-semibold">
-                  <Sparkles size={16} />
-                  ComFix 2025
-                </div> */}
-                <h2 className="text-3xl sm:text-4xl font-bold text-foreground">
-                  Innovate. Iterate. Ignite.
-                </h2>
-                <p className="text-muted-foreground leading-relaxed">
-                  ComFix 2025 is the second iteration of the communication
-                  technology ideation competition organized by the IEEE
-                  Communications Society (ComSoc) student branch chapter of the
-                  University of Moratuwa. We aim to promote the innovative
-                  thinking and technological know-how of undergraduates in the
-                  field of Communication Technology by solving real-world
-                  problems.
-                </p>
-                <div className="grid sm:grid-cols-3 gap-3 text-sm text-foreground">
-                  <Button
-                    variant="outline"
-                    className="w-full"
-                    onClick={() => setStage1Open(true)}
-                  >
-                    Stage 1
-                    <ArrowRight size={14} className="ml-2" />
-                  </Button>
-                  <Button
-                    variant="outline"
-                    className="w-full"
-                    onClick={() => setStage2Open(true)}
-                  >
-                    Stage 2
-                    <ArrowRight size={14} className="ml-2" />
-                  </Button>
-                  <Button
-                    variant="outline"
-                    className="w-full"
-                    onClick={() => setStage3Open(true)}
-                  >
-                    Stage 3
-                    <ArrowRight size={14} className="ml-2" />
-                  </Button>
-                </div>
+            <div className="max-w-2xl mx-auto text-center py-16">
+              <div className="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                <Calendar className="w-10 h-10 text-primary" />
               </div>
-
-              <div className="grid sm:grid-cols-2 gap-4">
-                {[comfix1, comfix2].map((img, idx) => (
-                  <div
-                    key={idx}
-                    className="relative overflow-hidden rounded-2xl shadow-[0_20px_50px_rgba(0,0,0,0.25)]"
-                  >
-                    <img
-                      src={img}
-                      alt="ComFix highlight"
-                      className="w-full h-56 sm:h-64 object-cover transition-transform duration-500 hover:scale-105"
-                      loading="lazy"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/45 to-transparent" />
-                  </div>
-                ))}
-              </div>
+              <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">
+                No Current Events
+              </h2>
+              <p className="text-muted-foreground leading-relaxed mb-6">
+                We're currently planning exciting new events for the upcoming semester. 
+                Stay tuned for workshops, competitions, and networking opportunities 
+                from IEEE ComSoc University of Moratuwa!
+              </p>
+              <p className="text-sm text-muted-foreground">
+                Check out our past events below or follow us on social media for the latest updates.
+              </p>
             </div>
           </div>
         </section>
