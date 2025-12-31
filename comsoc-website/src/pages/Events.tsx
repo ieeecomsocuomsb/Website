@@ -224,12 +224,13 @@ const Events = () => {
                 No Current Events
               </h2>
               <p className="text-muted-foreground leading-relaxed mb-6">
-                We're currently planning exciting new events for the upcoming semester. 
-                Stay tuned for workshops, competitions, and networking opportunities 
-                from IEEE ComSoc University of Moratuwa!
+                We're currently planning exciting new events for the upcoming
+                semester. Stay tuned for workshops, competitions, and networking
+                opportunities from IEEE ComSoc University of Moratuwa!
               </p>
               <p className="text-sm text-muted-foreground">
-                Check out our past events below or follow us on social media for the latest updates.
+                Check out our past events below or follow us on social media for
+                the latest updates.
               </p>
             </div>
           </div>

@@ -156,7 +156,8 @@ const AGMEvent = () => {
                 Want to see more photos?
               </h3>
               <p className="text-muted-foreground mb-6">
-                Check out the complete photo gallery from AGM 2025 on our Facebook page.
+                Check out the complete photo gallery from AGM 2025 on our
+                Facebook page.
               </p>
               <a
                 href={GALLERY_LINK}
@@ -164,7 +165,10 @@ const AGMEvent = () => {
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2 py-3 px-8 bg-gradient-to-r from-[#1877F2] to-[#0866FF] text-white font-medium rounded-xl hover:from-[#166FE5] hover:to-[#0756E0] transition-all hover:shadow-lg hover:shadow-blue-500/25 group"
               >
-                <Camera size={20} className="group-hover:scale-110 transition-transform" />
+                <Camera
+                  size={20}
+                  className="group-hover:scale-110 transition-transform"
+                />
                 View Full Gallery on Facebook
                 <ExternalLink size={16} className="ml-1 opacity-70" />
               </a>

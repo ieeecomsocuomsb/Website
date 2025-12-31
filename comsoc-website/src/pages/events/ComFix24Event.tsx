@@ -1,7 +1,15 @@
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
-import { ArrowLeft, Calendar, Users, Award, Lightbulb, ExternalLink, Camera } from "lucide-react";
+import {
+  ArrowLeft,
+  Calendar,
+  Users,
+  Award,
+  Lightbulb,
+  ExternalLink,
+  Camera,
+} from "lucide-react";
 import { Link } from "react-router-dom";
 import {
   Carousel,
@@ -189,7 +197,8 @@ const ComFix24Event = () => {
                 Want to see more photos?
               </h3>
               <p className="text-muted-foreground mb-6">
-                Check out the complete photo gallery from ComFix'24 on our Facebook page.
+                Check out the complete photo gallery from ComFix'24 on our
+                Facebook page.
               </p>
               <a
                 href={GALLERY_LINK}
@@ -197,7 +206,10 @@ const ComFix24Event = () => {
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2 py-3 px-8 bg-gradient-to-r from-[#1877F2] to-[#0866FF] text-white font-medium rounded-xl hover:from-[#166FE5] hover:to-[#0756E0] transition-all hover:shadow-lg hover:shadow-blue-500/25 group"
               >
-                <Camera size={20} className="group-hover:scale-110 transition-transform" />
+                <Camera
+                  size={20}
+                  className="group-hover:scale-110 transition-transform"
+                />
                 View Full Gallery on Facebook
                 <ExternalLink size={16} className="ml-1 opacity-70" />
               </a>
