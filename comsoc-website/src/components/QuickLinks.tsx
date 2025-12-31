@@ -3,7 +3,7 @@ import { Calendar, Users, BookOpen, ArrowRight } from "lucide-react";
 
 const links = [
   {
-    title: "Upcoming Events",
+    title: "Events",
     description: "Discover our workshops, seminars, and technical competitions.",
     icon: Calendar,
     href: "/events",
