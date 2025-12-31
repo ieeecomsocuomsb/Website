@@ -236,7 +236,7 @@ const Events = () => {
                 Our History
               </span>
               <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">
-                Past Events Gallery
+                Past Events
               </h2>
               <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
                 A glimpse into our successful events and the memories we've
