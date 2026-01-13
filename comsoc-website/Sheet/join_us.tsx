@@ -227,7 +227,7 @@ const JoinUsAndContact: React.FC = () => {
                         })
                       }
                       required
-                      className="w-full px-4 py-3 bg-background border border-border rounded-xl focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all text-foreground placeholder:text-muted-foreground"
+                      className="w-full px-4 py-3 mb-3 bg-background border border-border rounded-xl focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all text-foreground placeholder:text-muted-foreground"
                     />
                   </div>
 
@@ -246,7 +246,7 @@ const JoinUsAndContact: React.FC = () => {
                         })
                       }
                       required
-                      className="w-full px-4 py-3 bg-background border border-border rounded-xl focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all text-foreground placeholder:text-muted-foreground"
+                      className="w-full px-4 py-3 mb-3 bg-background border border-border rounded-xl focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all text-foreground placeholder:text-muted-foreground"
                     />
                   </div>
 
@@ -265,7 +265,7 @@ const JoinUsAndContact: React.FC = () => {
                         })
                       }
                       required
-                      className="w-full px-4 py-3 bg-background border border-border rounded-xl focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all text-foreground placeholder:text-muted-foreground"
+                      className="w-full px-4 py-3 mb-3 bg-background border border-border rounded-xl focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all text-foreground placeholder:text-muted-foreground"
                     />
                   </div>
 
@@ -291,7 +291,8 @@ const JoinUsAndContact: React.FC = () => {
                   <button
                     type="submit"
                     disabled={joinLoading}
-                    className="w-full py-3 px-6 my-6 bg-primary text-primary-foreground font-semibold rounded-xl hover:bg-primary/90 transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2 "
+                    className="w-full py-3 px-6 bg-primary text-primary-foreground font-semibold rounded-xl hover:bg-primary/90 transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+                    style={{ marginTop: 30, marginBottom: 8 }}
                   >
                     {joinLoading ? (
                       <>
@@ -373,7 +374,7 @@ const JoinUsAndContact: React.FC = () => {
                           })
                         }
                         required
-                        className="w-full px-4 py-3 bg-background border border-border rounded-xl focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all text-foreground placeholder:text-muted-foreground"
+                        className="w-full px-4 py-3 mb-3 bg-background border border-border rounded-xl focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all text-foreground placeholder:text-muted-foreground"
                       />
                     </div>
                   </div>
@@ -393,7 +394,7 @@ const JoinUsAndContact: React.FC = () => {
                         })
                       }
                       required
-                      className="w-full px-4 py-3 bg-background border border-border rounded-xl focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all text-foreground placeholder:text-muted-foreground"
+                      className="w-full px-4 py-3 mb-3 bg-background border border-border rounded-xl focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all text-foreground placeholder:text-muted-foreground"
                     />
                   </div>
 
