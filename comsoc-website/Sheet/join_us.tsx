@@ -50,6 +50,18 @@ const JoinUsAndContact: React.FC = () => {
 
   const handleJoinSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+
+    // Extra safety: require non-empty values (not just spaces)
+    if (
+      !joinFormData.name.trim() ||
+      !joinFormData.faculty.trim() ||
+      !joinFormData.batch.trim() ||
+      !joinFormData.phone.trim()
+    ) {
+      alert("Please fill in all Join Us details.");
+      return;
+    }
+
     setJoinLoading(true);
 
     const SCRIPT_URL =
@@ -279,7 +291,7 @@ const JoinUsAndContact: React.FC = () => {
                   <button
                     type="submit"
                     disabled={joinLoading}
-                    className="w-full py-3 px-6 bg-primary text-primary-foreground font-semibold rounded-xl hover:bg-primary/90 transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+                    className="w-full py-3 px-6 my-6 bg-primary text-primary-foreground font-semibold rounded-xl hover:bg-primary/90 transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2 "
                   >
                     {joinLoading ? (
                       <>
