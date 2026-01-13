@@ -13,6 +13,7 @@ import FieldVisitEvent from "./pages/events/FieldVisitEvent";
 import ComFix24Event from "./pages/events/ComFix24Event";
 import ComFix25Event from "./pages/events/ComFix25Event";
 import ScrollToTop from "./components/ScrollToTop";
+import JoinUsAndContact from "../Sheet/join_us";
 
 const queryClient = new QueryClient();
 
@@ -22,7 +23,7 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
-      <ScrollToTop/>
+        <ScrollToTop />
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/about" element={<About />} />
@@ -32,6 +33,8 @@ const App = () => (
           <Route path="/events/comfix-24" element={<ComFix24Event />} />
           <Route path="/events/comfix-25" element={<ComFix25Event />} />
           <Route path="/committee" element={<Committee />} />
+          <Route path="/join-us" element={<JoinUsAndContact />} />
+          <Route path="/contact" element={<JoinUsAndContact />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
