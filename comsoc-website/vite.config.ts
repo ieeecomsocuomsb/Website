@@ -27,5 +27,11 @@ export default defineConfig(({ mode }) => ({
       "@": path.resolve(__dirname, "./src"),
     },
   },
-  assetsInclude: ["**/*.JPG", "**/*.JPEG", "**/*.jpg", "**/*.jpeg", "**/*.webp"],
+  assetsInclude: [
+    "**/*.JPG",
+    "**/*.JPEG",
+    "**/*.jpg",
+    "**/*.jpeg",
+    "**/*.webp",
+  ],
 }));
