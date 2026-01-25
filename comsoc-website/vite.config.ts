@@ -19,7 +19,7 @@ export default defineConfig(({ mode }) => ({
       name: "html-transform",
       enforce: "pre",
       transformIndexHtml(html) {
-        return html.replace(/%SITE_URL%/g, SITE_URL);
+        return html.replace(/__SITE_URL_HTML__/g, SITE_URL);
       },
     },
   ],
