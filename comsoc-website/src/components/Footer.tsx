@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Mail, MapPin, Linkedin, Facebook, Twitter } from "lucide-react";
+import { Mail, MapPin, Linkedin, Facebook } from "lucide-react";
 
 export function Footer() {
   return (
@@ -85,7 +85,6 @@ export function Footer() {
                   href: "https://www.facebook.com/IEEEComSocUoM/",
                   label: "Facebook",
                 },
-                // { icon: Twitter, href: "#", label: "Twitter" },
               ].map((social) => (
                 <a
                   key={social.label}
