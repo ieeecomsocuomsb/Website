@@ -17,6 +17,7 @@ export default defineConfig(({ mode }) => ({
     react(),
     {
       name: "html-transform",
+      enforce: "pre",
       transformIndexHtml(html) {
         return html.replace(/%SITE_URL%/g, SITE_URL);
       },
