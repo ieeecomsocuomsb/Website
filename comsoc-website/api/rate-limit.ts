@@ -1,29 +1,48 @@
-// Vercel Edge Function (standard Web Request/Response API)
+// Vercel Edge Function with Upstash Redis rate limiting
 // Path: /api/rate-limit
-// Configure via env vars: UPSTASH_REDIS_REST_URL, UPSTASH_REDIS_REST_TOKEN, RATE_LIMIT, RATE_WINDOW
+// Required env vars: UPSTASH_REDIS_REST_URL, UPSTASH_REDIS_REST_TOKEN
 
 export const config = {
   runtime: "edge",
 };
 
-// Pure in-memory rate limiter implementation (per-instance)
-// Note: This does not persist across instances and is intended
-// for simple protections on small sites or local testing.
 const RATE_LIMIT = 3;
-const RATE_WINDOW = 30;
+const RATE_WINDOW = 30; // seconds
 
-const memoryStore = new Map<string, { count: number; expiresAt: number }>();
+async function checkRateLimit(
+  ip: string,
+): Promise<{ allowed: boolean; count: number }> {
+  const UPSTASH_URL = process.env.UPSTASH_REDIS_REST_URL;
+  const UPSTASH_TOKEN = process.env.UPSTASH_REDIS_REST_TOKEN;
 
-function incrementKey(ip: string) {
-  const key = `ratelimit:${ip}`;
-  const now = Date.now();
-  const entry = memoryStore.get(key);
-  if (!entry || entry.expiresAt <= now) {
-    memoryStore.set(key, { count: 1, expiresAt: now + RATE_WINDOW * 1000 });
-    return 1;
+  // If Upstash is not configured, allow the request (fail open)
+  if (!UPSTASH_URL || !UPSTASH_TOKEN) {
+    console.warn("Upstash not configured - rate limiting disabled");
+    return { allowed: true, count: 0 };
   }
-  entry.count += 1;
-  return entry.count;
+
+  const key = `ratelimit:${ip}`;
+
+  try {
+    // Use INCR to atomically increment the counter
+    const incrResponse = await fetch(`${UPSTASH_URL}/incr/${key}`, {
+      headers: { Authorization: `Bearer ${UPSTASH_TOKEN}` },
+    });
+    const incrData = await incrResponse.json();
+    const count = incrData.result;
+
+    // If this is the first request, set expiry
+    if (count === 1) {
+      await fetch(`${UPSTASH_URL}/expire/${key}/${RATE_WINDOW}`, {
+        headers: { Authorization: `Bearer ${UPSTASH_TOKEN}` },
+      });
+    }
+
+    return { allowed: count <= RATE_LIMIT, count };
+  } catch (error) {
+    console.error("Upstash rate limit check failed:", error);
+    return { allowed: true, count: 0 }; // Fail open
+  }
 }
 
 export default async function handler(req: Request) {
@@ -42,13 +61,15 @@ export default async function handler(req: Request) {
     : req.headers.get("host") || "unknown";
 
   try {
-    const count = incrementKey(ip as string);
-    if (count > RATE_LIMIT) {
+    const { allowed, count } = await checkRateLimit(ip);
+
+    if (!allowed) {
       return new Response(JSON.stringify({ message: "Too many requests" }), {
         status: 429,
         headers: { "Content-Type": "application/json" },
       });
     }
+
     return new Response(
       JSON.stringify({
         allowed: true,
