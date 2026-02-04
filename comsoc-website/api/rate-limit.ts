@@ -6,8 +6,8 @@ export const config = {
   runtime: "edge",
 };
 
-const RATE_LIMIT = 3;
-const RATE_WINDOW = 30; // seconds
+const RATE_LIMIT = 60;
+const RATE_WINDOW = 60; // seconds
 
 async function checkRateLimit(
   ip: string,
