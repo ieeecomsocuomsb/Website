@@ -84,7 +84,7 @@ export function HeroSection() {
           </h1>
 
           <p className="text-lg sm:text-xl text-primary-foreground/80 mb-8 leading-relaxed animate-fade-in-up animation-delay-200">
-            Advancing communications and networking technology for the betterment of humanity
+            Advanc communications and networking technology for the betterment of humanity
           </p>
 
           {/* CTA Buttons */}
