@@ -9,8 +9,8 @@ export const config = {
 // Pure in-memory rate limiter implementation (per-instance)
 // Note: This does not persist across instances and is intended
 // for simple protections on small sites or local testing.
-const RATE_LIMIT = Number(process.env.RATE_LIMIT || "3");
-const RATE_WINDOW = Number(process.env.RATE_WINDOW || "30");
+const RATE_LIMIT = 3;
+const RATE_WINDOW = 30;
 
 const memoryStore = new Map<string, { count: number; expiresAt: number }>();
 
