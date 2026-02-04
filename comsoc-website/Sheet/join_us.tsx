@@ -48,6 +48,8 @@ const JoinUsAndContact: React.FC = () => {
   const [joinLoading, setJoinLoading] = useState(false);
   const [joinSuccess, setJoinSuccess] = useState(false);
 
+  const [rateLimitError, setRateLimitError] = useState(false);
+
   const handleJoinSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
@@ -63,6 +65,22 @@ const JoinUsAndContact: React.FC = () => {
     }
 
     setJoinLoading(true);
+    setRateLimitError(false);
+
+    // Check rate limit before submitting
+    try {
+      const rateLimitRes = await fetch("/api/rate-limit", {
+        method: "POST",
+      });
+
+      if (rateLimitRes.status === 429) {
+        setRateLimitError(true);
+        setJoinLoading(false);
+        return;
+      }
+    } catch (err) {
+      console.warn("Rate limit check failed, proceeding with submission", err);
+    }
 
     const SCRIPT_URL =
       "https://script.google.com/macros/s/AKfycbydYxR-pgfa1Sm19W0ZZZG7d1LeMoFFUZEO3_PD4EdTwZ1zc0kkdW-Yb9gV6xFR1AU/exec";
@@ -97,7 +115,7 @@ const JoinUsAndContact: React.FC = () => {
     const recipient = "ieeecomsocuomsb@gmail.com"; // Change this to your email
     const subject = encodeURIComponent(contactFormData.subject);
     const body = encodeURIComponent(
-      `Name: ${contactFormData.name}\nEmail: ${contactFormData.email}\n\nMessage:\n${contactFormData.message}`
+      `Name: ${contactFormData.name}\nEmail: ${contactFormData.email}\n\nMessage:\n${contactFormData.message}`,
     );
 
     // Open email client
@@ -206,6 +224,11 @@ const JoinUsAndContact: React.FC = () => {
                 <h3 className="text-xl font-semibold text-foreground mb-6">
                   Fill in your details
                 </h3>
+                {rateLimitError && (
+                  <div className="mb-6 p-4 bg-red-100 dark:bg-red-900/30 border border-red-300 dark:border-red-700 rounded-xl text-red-800 dark:text-red-200">
+                    ⚠️ Too many requests. Please wait a moment and try again.
+                  </div>
+                )}
                 {joinSuccess && (
                   <div className="mb-6 p-4 bg-green-100 dark:bg-green-900/30 border border-green-300 dark:border-green-700 rounded-xl text-green-800 dark:text-green-200">
                     🎉 Success! Welcome to IEEE ComSoc UoM!
